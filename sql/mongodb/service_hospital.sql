@@ -1,0 +1,5990 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : manage_hospital
+ Source Server Type    : MongoDB
+ Source Server Version : 50005
+ Source Host           : 192.168.37.130:27017
+ Source Schema         : service_hospital
+
+ Target Server Type    : MongoDB
+ Target Server Version : 50005
+ File Encoding         : 65001
+
+ Date: 11/03/2024 20:21:07
+*/
+
+
+// ----------------------------
+// Collection structure for Department
+// ----------------------------
+db.getCollection("Department").drop();
+db.createCollection("Department");
+db.getCollection("Department").createIndex({
+    hoscode: NumberInt("1")
+}, {
+    name: "hoscode"
+});
+db.getCollection("Department").createIndex({
+    depcode: NumberInt("1")
+}, {
+    name: "depcode",
+    unique: true
+});
+
+// ----------------------------
+// Documents of Department
+// ----------------------------
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb8f2bff8373f119ce01"),
+    hoscode: "1004",
+    depcode: "200050923",
+    depname: "门诊部核酸检测门诊(东院)",
+    intro: "门诊部核酸检测门诊(东院)",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2024-03-10T13:54:23.509Z"),
+    updateTime: ISODate("2024-03-10T13:54:23.51Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce02"),
+    hoscode: "1004",
+    depcode: "200050924",
+    depname: "国际医疗部门诊",
+    intro: "国际医疗部门诊",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2024-03-10T13:54:24.087Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.087Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce04"),
+    hoscode: "1004",
+    depcode: "200050964",
+    depname: "内分泌科互联网诊疗",
+    intro: "内分泌科互联网诊疗",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2024-03-10T13:54:24.215Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.215Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce05"),
+    hoscode: "1004",
+    depcode: "200051188",
+    depname: "心内科互联网诊疗",
+    intro: "心内科互联网诊疗",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2024-03-10T13:54:24.314Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.314Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce06"),
+    hoscode: "1004",
+    depcode: "200051469",
+    depname: "特需心理医学科门诊2",
+    intro: "特需心理医学科门诊2",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2024-03-10T13:54:24.371Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.371Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce07"),
+    hoscode: "1004",
+    depcode: "200041542",
+    depname: "特需心内科门诊2",
+    intro: "特需心内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:24.419Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.419Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce08"),
+    hoscode: "1004",
+    depcode: "200042374",
+    depname: "特需消化内科门诊2",
+    intro: "特需消化内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:24.477Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.477Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce09"),
+    hoscode: "1004",
+    depcode: "200040886",
+    depname: "特需内分泌科门诊(西院)1",
+    intro: "特需内分泌科门诊(西院)1",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:24.552Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.552Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce0a"),
+    hoscode: "1004",
+    depcode: "200041246",
+    depname: "特需呼吸内科门诊2",
+    intro: "特需呼吸内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:24.608Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.608Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce0b"),
+    hoscode: "1004",
+    depcode: "200041038",
+    depname: "特需肾内科门诊2",
+    intro: "特需肾内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:24.655Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.655Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce0c"),
+    hoscode: "1004",
+    depcode: "200041244",
+    depname: "特需血液内科门诊2",
+    intro: "特需血液内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:24.704Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.704Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce0d"),
+    hoscode: "1004",
+    depcode: "200044248",
+    depname: "特需老年医学科门诊2",
+    intro: "特需老年医学科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:24.772Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.772Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce0e"),
+    hoscode: "1004",
+    depcode: "200040166",
+    depname: "特需普通内科门诊1",
+    intro: "特需普通内科门诊1",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:24.863Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.863Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb902bff8373f119ce0f"),
+    hoscode: "1004",
+    depcode: "200041666",
+    depname: "内科门诊(西院)",
+    intro: "内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:24.925Z"),
+    updateTime: ISODate("2024-03-10T13:54:24.925Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce10"),
+    hoscode: "1004",
+    depcode: "200043118",
+    depname: "普通内科全科门诊",
+    intro: "普通内科全科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.021Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.021Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce11"),
+    hoscode: "1004",
+    depcode: "200045974",
+    depname: "普通内科疑难病症门诊",
+    intro: "普通内科疑难病症门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.074Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.074Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce12"),
+    hoscode: "1004",
+    depcode: "200048285",
+    depname: "特需肿瘤内科门诊2",
+    intro: "特需肿瘤内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.158Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.158Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce13"),
+    hoscode: "1004",
+    depcode: "200048369",
+    depname: "特需普通内科门诊2",
+    intro: "特需普通内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.224Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.224Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce14"),
+    hoscode: "1004",
+    depcode: "200048378",
+    depname: "卫干门诊(内科)",
+    intro: "卫干门诊(内科)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.265Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.265Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce15"),
+    hoscode: "1004",
+    depcode: "200048380",
+    depname: "特需免疫内科门诊2",
+    intro: "特需免疫内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.306Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.306Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce16"),
+    hoscode: "1004",
+    depcode: "200048440",
+    depname: "特需感染内科门诊2",
+    intro: "特需感染内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.356Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.356Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce17"),
+    hoscode: "1004",
+    depcode: "200004002",
+    depname: "内分泌科门诊(西院)",
+    intro: "内分泌科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.399Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.399Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce18"),
+    hoscode: "1004",
+    depcode: "200004004",
+    depname: "特需内分泌科门诊2",
+    intro: "特需内分泌科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.479Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.479Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce19"),
+    hoscode: "1004",
+    depcode: "200004020",
+    depname: "特需普通内科门诊(西院)",
+    intro: "特需普通内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.524Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.524Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce1a"),
+    hoscode: "1004",
+    depcode: "200004014",
+    depname: "肿瘤内科门诊",
+    intro: "肿瘤内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.571Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.571Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce1b"),
+    hoscode: "1004",
+    depcode: "200003975",
+    depname: "心内科门诊",
+    intro: "心内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.617Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.617Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce1c"),
+    hoscode: "1004",
+    depcode: "200003976",
+    depname: "心内科门诊(西院)",
+    intro: "心内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.677Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.677Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce1d"),
+    hoscode: "1004",
+    depcode: "200003977",
+    depname: "心内科高血压专科门诊",
+    intro: "心内科高血压专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.733Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.733Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce1e"),
+    hoscode: "1004",
+    depcode: "200003978",
+    depname: "特需心内科门诊",
+    intro: "特需心内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.859Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.859Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce1f"),
+    hoscode: "1004",
+    depcode: "200004005",
+    depname: "神经科门诊",
+    intro: "神经科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.907Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.907Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb912bff8373f119ce20"),
+    hoscode: "1004",
+    depcode: "200004006",
+    depname: "神经科门诊(西院)",
+    intro: "神经科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:25.958Z"),
+    updateTime: ISODate("2024-03-10T13:54:25.958Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce21"),
+    hoscode: "1004",
+    depcode: "200004007",
+    depname: "神经内科癫痫门诊",
+    intro: "神经内科癫痫门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.000Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.000Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce22"),
+    hoscode: "1004",
+    depcode: "200004010",
+    depname: "特需神经科门诊2",
+    intro: "特需神经科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.044Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.044Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce23"),
+    hoscode: "1004",
+    depcode: "200003997",
+    depname: "消化内科门诊",
+    intro: "消化内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.098Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.098Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce24"),
+    hoscode: "1004",
+    depcode: "200003998",
+    depname: "消化内科门诊(西院)",
+    intro: "消化内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.143Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.143Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce25"),
+    hoscode: "1004",
+    depcode: "200003999",
+    depname: "早期胃癌专科门诊",
+    intro: "早期胃癌专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.193Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.193Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce26"),
+    hoscode: "1004",
+    depcode: "200004000",
+    depname: "特需消化内科门诊",
+    intro: "特需消化内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.237Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.237Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce27"),
+    hoscode: "1004",
+    depcode: "200004001",
+    depname: "内分泌科门诊",
+    intro: "内分泌科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.281Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.281Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce28"),
+    hoscode: "1004",
+    depcode: "200004003",
+    depname: "特需内分泌科门诊",
+    intro: "特需内分泌科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.336Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.336Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce29"),
+    hoscode: "1004",
+    depcode: "200003989",
+    depname: "免疫内科门诊",
+    intro: "免疫内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.383Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.383Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce2a"),
+    hoscode: "1004",
+    depcode: "200003990",
+    depname: "免疫内科门诊(西院)",
+    intro: "免疫内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.426Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.426Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce2b"),
+    hoscode: "1004",
+    depcode: "200003991",
+    depname: "特需免疫内科门诊",
+    intro: "特需免疫内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.466Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.466Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce2c"),
+    hoscode: "1004",
+    depcode: "200003992",
+    depname: "特需免疫内科门诊(西院)",
+    intro: "特需免疫内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.503Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.503Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce2d"),
+    hoscode: "1004",
+    depcode: "200003993",
+    depname: "呼吸内科门诊",
+    intro: "呼吸内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.539Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.539Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce2e"),
+    hoscode: "1004",
+    depcode: "200003994",
+    depname: "呼吸内科门诊(西院)",
+    intro: "呼吸内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.58Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.58Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce2f"),
+    hoscode: "1004",
+    depcode: "200003995",
+    depname: "戒烟门诊",
+    intro: "戒烟门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.617Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.617Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce30"),
+    hoscode: "1004",
+    depcode: "200003996",
+    depname: "特需呼吸内科门诊",
+    intro: "特需呼吸内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.656Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.656Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce31"),
+    hoscode: "1004",
+    depcode: "200003979",
+    depname: "肾内科门诊",
+    intro: "肾内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.701Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.701Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce32"),
+    hoscode: "1004",
+    depcode: "200003980",
+    depname: "肾内科门诊(西院)",
+    intro: "肾内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.749Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.749Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce33"),
+    hoscode: "1004",
+    depcode: "200003981",
+    depname: "特需肾内科门诊",
+    intro: "特需肾内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.794Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.794Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce34"),
+    hoscode: "1004",
+    depcode: "200003982",
+    depname: "血液科门诊",
+    intro: "血液科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.841Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.841Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce35"),
+    hoscode: "1004",
+    depcode: "200003983",
+    depname: "血友病门诊(西院)",
+    intro: "血友病门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.887Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.887Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce36"),
+    hoscode: "1004",
+    depcode: "200003984",
+    depname: "特需血液内科门诊",
+    intro: "特需血液内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.932Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.932Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb922bff8373f119ce37"),
+    hoscode: "1004",
+    depcode: "200003985",
+    depname: "感染内科门诊",
+    intro: "感染内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:26.983Z"),
+    updateTime: ISODate("2024-03-10T13:54:26.983Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce38"),
+    hoscode: "1004",
+    depcode: "200003986",
+    depname: "感染内科热病门诊",
+    intro: "感染内科热病门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.033Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.033Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce39"),
+    hoscode: "1004",
+    depcode: "200003987",
+    depname: "感染内科免疫功能低下门诊",
+    intro: "感染内科免疫功能低下门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.08Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.08Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce3a"),
+    hoscode: "1004",
+    depcode: "200003988",
+    depname: "特需感染内科门诊",
+    intro: "特需感染内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.12Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.12Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce3b"),
+    hoscode: "1004",
+    depcode: "200003973",
+    depname: "老年综合门诊",
+    intro: "老年综合门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.173Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.173Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce3c"),
+    hoscode: "1004",
+    depcode: "200003974",
+    depname: "特需老年综合门诊",
+    intro: "特需老年综合门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.219Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.219Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce3d"),
+    hoscode: "1004",
+    depcode: "200003972",
+    depname: "内科门诊",
+    intro: "内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.262Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.262Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce3e"),
+    hoscode: "1004",
+    depcode: "200004018",
+    depname: "普通内科门诊",
+    intro: "普通内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.303Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.303Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce3f"),
+    hoscode: "1004",
+    depcode: "200004019",
+    depname: "普通内科门诊(西院)",
+    intro: "普通内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.352Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.352Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce40"),
+    hoscode: "1004",
+    depcode: "200004015",
+    depname: "肿瘤内科门诊(西院)",
+    intro: "肿瘤内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.4Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.4Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce41"),
+    hoscode: "1004",
+    depcode: "200004016",
+    depname: "特需肿瘤内科门诊1",
+    intro: "特需肿瘤内科门诊1",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.451Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.451Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce42"),
+    hoscode: "1004",
+    depcode: "200004017",
+    depname: "特需肿瘤内科门诊(西院)",
+    intro: "特需肿瘤内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.536Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.536Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce43"),
+    hoscode: "1004",
+    depcode: "200004012",
+    depname: "重症肌无力专科门诊",
+    intro: "重症肌无力专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.582Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.582Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce44"),
+    hoscode: "1004",
+    depcode: "200004008",
+    depname: "头疼专科门诊",
+    intro: "头疼专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.627Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.627Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce45"),
+    hoscode: "1004",
+    depcode: "200004009",
+    depname: "脑血管病专科门诊",
+    intro: "脑血管病专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.673Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.673Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce46"),
+    hoscode: "1004",
+    depcode: "200004011",
+    depname: "痴呆与脑白质病专科门诊",
+    intro: "痴呆与脑白质病专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.714Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.714Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce47"),
+    hoscode: "1004",
+    depcode: "200004134",
+    depname: "肝炎门诊",
+    intro: "肝炎门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2024-03-10T13:54:27.75Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.75Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce48"),
+    hoscode: "1004",
+    depcode: "200045976",
+    depname: "特需血管外科门诊2",
+    intro: "特需血管外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:27.801Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.801Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce49"),
+    hoscode: "1004",
+    depcode: "200040164",
+    depname: "特需胸外科门诊2",
+    intro: "特需胸外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:27.844Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.844Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce4a"),
+    hoscode: "1004",
+    depcode: "200048287",
+    depname: "乳腺外科乳癌化疗门诊(西院)",
+    intro: "乳腺外科乳癌化疗门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:27.882Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.882Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb932bff8373f119ce4b"),
+    hoscode: "1004",
+    depcode: "200048331",
+    depname: "乳腺外科乳癌随访门诊(西院)",
+    intro: "乳腺外科乳癌随访门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:27.922Z"),
+    updateTime: ISODate("2024-03-10T13:54:27.922Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce4c"),
+    hoscode: "1004",
+    depcode: "200048412",
+    depname: "特需整形外科门诊2",
+    intro: "特需整形外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.002Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.002Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce4d"),
+    hoscode: "1004",
+    depcode: "200048490",
+    depname: "泌尿外科专项诊疗门诊",
+    intro: "泌尿外科专项诊疗门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.048Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.048Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce4e"),
+    hoscode: "1004",
+    depcode: "200048586",
+    depname: "胸外科化疗专病门诊",
+    intro: "胸外科化疗专病门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.082Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.082Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce4f"),
+    hoscode: "1004",
+    depcode: "200004041",
+    depname: "特需神经外科门诊2",
+    intro: "特需神经外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.126Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.126Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce50"),
+    hoscode: "1004",
+    depcode: "200004051",
+    depname: "心外科门诊",
+    intro: "心外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.178Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.178Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce51"),
+    hoscode: "1004",
+    depcode: "200004052",
+    depname: "心外科成人门诊",
+    intro: "心外科成人门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.221Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.221Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce52"),
+    hoscode: "1004",
+    depcode: "200004053",
+    depname: "特需心外科门诊1",
+    intro: "特需心外科门诊1",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.265Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.265Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce53"),
+    hoscode: "1004",
+    depcode: "200004054",
+    depname: "特需心外科门诊2",
+    intro: "特需心外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.308Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.308Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce54"),
+    hoscode: "1004",
+    depcode: "200004049",
+    depname: "特需泌尿外科门诊2",
+    intro: "特需泌尿外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.37Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.37Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce55"),
+    hoscode: "1004",
+    depcode: "200004072",
+    depname: "特需肝脏外科门诊2",
+    intro: "特需肝脏外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.461Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.461Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce56"),
+    hoscode: "1004",
+    depcode: "200004027",
+    depname: "特需基本外科门诊2",
+    intro: "特需基本外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.828Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.828Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce57"),
+    hoscode: "1004",
+    depcode: "200004031",
+    depname: "特需骨科门诊2",
+    intro: "特需骨科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.899Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.899Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce58"),
+    hoscode: "1004",
+    depcode: "200004046",
+    depname: "肾积水专科门诊",
+    intro: "肾积水专科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.941Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.941Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb942bff8373f119ce59"),
+    hoscode: "1004",
+    depcode: "200004034",
+    depname: "神经外科门诊",
+    intro: "神经外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:28.986Z"),
+    updateTime: ISODate("2024-03-10T13:54:28.986Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce5a"),
+    hoscode: "1004",
+    depcode: "200004035",
+    depname: "神经外科门诊(西院)",
+    intro: "神经外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.03Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.03Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce5b"),
+    hoscode: "1004",
+    depcode: "200004040",
+    depname: "特需神经外科门诊",
+    intro: "特需神经外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.067Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.067Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce5c"),
+    hoscode: "1004",
+    depcode: "200004059",
+    depname: "血管外科门诊",
+    intro: "血管外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.126Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.126Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce5d"),
+    hoscode: "1004",
+    depcode: "200004060",
+    depname: "血管外科门诊(西院)",
+    intro: "血管外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.166Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.166Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce5e"),
+    hoscode: "1004",
+    depcode: "200004061",
+    depname: "动脉疾病专科门诊",
+    intro: "动脉疾病专科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.214Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.214Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce5f"),
+    hoscode: "1004",
+    depcode: "200004062",
+    depname: "特需血管外科门诊",
+    intro: "特需血管外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.268Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.268Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce60"),
+    hoscode: "1004",
+    depcode: "200004063",
+    depname: "特需血管外科门诊(西院)",
+    intro: "特需血管外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.329Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.329Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce61"),
+    hoscode: "1004",
+    depcode: "200004032",
+    depname: "胸外科门诊",
+    intro: "胸外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.375Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.375Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce62"),
+    hoscode: "1004",
+    depcode: "200004033",
+    depname: "特需胸外科门诊",
+    intro: "特需胸外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.44Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.44Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce63"),
+    hoscode: "1004",
+    depcode: "200004066",
+    depname: "特需整形外科门诊(西院)",
+    intro: "特需整形外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.492Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.492Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce64"),
+    hoscode: "1004",
+    depcode: "200004067",
+    depname: "乳腺外科门诊",
+    intro: "乳腺外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.527Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.527Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce65"),
+    hoscode: "1004",
+    depcode: "200004068",
+    depname: "乳腺外科门诊(西院)",
+    intro: "乳腺外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.57Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.57Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce66"),
+    hoscode: "1004",
+    depcode: "200004069",
+    depname: "特需乳腺外科门诊(西院)1",
+    intro: "特需乳腺外科门诊(西院)1",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.606Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.606Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce67"),
+    hoscode: "1004",
+    depcode: "200004042",
+    depname: "泌尿外科门诊",
+    intro: "泌尿外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.64Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.64Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce68"),
+    hoscode: "1004",
+    depcode: "200004043",
+    depname: "泌尿外科男科门诊",
+    intro: "泌尿外科男科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.676Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.676Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce69"),
+    hoscode: "1004",
+    depcode: "200004044",
+    depname: "泌尿外科门诊(西院)",
+    intro: "泌尿外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.718Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.718Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce6a"),
+    hoscode: "1004",
+    depcode: "200004045",
+    depname: "泌尿外科男科门诊(西院)",
+    intro: "泌尿外科男科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.758Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.758Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce6b"),
+    hoscode: "1004",
+    depcode: "200004047",
+    depname: "特需泌尿外科门诊",
+    intro: "特需泌尿外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.791Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.791Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce6c"),
+    hoscode: "1004",
+    depcode: "200004070",
+    depname: "肝脏外科门诊",
+    intro: "肝脏外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.825Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.825Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce6d"),
+    hoscode: "1004",
+    depcode: "200004071",
+    depname: "特需肝外科门诊",
+    intro: "特需肝外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.861Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.861Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce6e"),
+    hoscode: "1004",
+    depcode: "200004022",
+    depname: "外科门诊",
+    intro: "外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.894Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.894Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce6f"),
+    hoscode: "1004",
+    depcode: "200004023",
+    depname: "基本外科门诊",
+    intro: "基本外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.929Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.929Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb952bff8373f119ce70"),
+    hoscode: "1004",
+    depcode: "200004025",
+    depname: "基本外科门诊(西院)",
+    intro: "基本外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:29.967Z"),
+    updateTime: ISODate("2024-03-10T13:54:29.967Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce71"),
+    hoscode: "1004",
+    depcode: "200004026",
+    depname: "特需基本外科门诊1",
+    intro: "特需基本外科门诊1",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:30.001Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.001Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce72"),
+    hoscode: "1004",
+    depcode: "200004028",
+    depname: "骨科门诊",
+    intro: "骨科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:30.036Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.036Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce73"),
+    hoscode: "1004",
+    depcode: "200004029",
+    depname: "骨科门诊(西院)",
+    intro: "骨科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:30.075Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.075Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce74"),
+    hoscode: "1004",
+    depcode: "200004030",
+    depname: "特需骨科门诊",
+    intro: "特需骨科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:30.116Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.116Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce75"),
+    hoscode: "1004",
+    depcode: "200004064",
+    depname: "整形美容外科门诊",
+    intro: "整形美容外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:30.156Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.156Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce76"),
+    hoscode: "1004",
+    depcode: "200004116",
+    depname: "急诊科",
+    intro: "急诊科",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:30.203Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.203Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce77"),
+    hoscode: "1004",
+    depcode: "200004065",
+    depname: "整形美容外科门诊(西院)",
+    intro: "整形美容外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:30.291Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.291Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce78"),
+    hoscode: "1004",
+    depcode: "200039788",
+    depname: "泌尿外科肾癌靶向治疗专病门诊",
+    intro: "泌尿外科肾癌靶向治疗专病门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2024-03-10T13:54:30.341Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.341Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce79"),
+    hoscode: "1004",
+    depcode: "200046682",
+    depname: "特需综合妇科门诊",
+    intro: "特需综合妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.379Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.379Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce7a"),
+    hoscode: "1004",
+    depcode: "200046684",
+    depname: "特需妇科内分泌门诊2",
+    intro: "特需妇科内分泌门诊2",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.421Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.421Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce7b"),
+    hoscode: "1004",
+    depcode: "200048276",
+    depname: "妇泌中心(西院)",
+    intro: "妇泌中心(西院)",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.469Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.469Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce7c"),
+    hoscode: "1004",
+    depcode: "200048413",
+    depname: "特需普通妇科门诊",
+    intro: "特需普通妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.508Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.508Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce7d"),
+    hoscode: "1004",
+    depcode: "200048441",
+    depname: "特需肿瘤妇科门诊",
+    intro: "特需肿瘤妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.55Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.55Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce7e"),
+    hoscode: "1004",
+    depcode: "200048447",
+    depname: "特需妇科计划生育门诊",
+    intro: "特需妇科计划生育门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.588Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.588Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce7f"),
+    hoscode: "1004",
+    depcode: "200048487",
+    depname: "特需产科门诊",
+    intro: "特需产科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.625Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.625Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce80"),
+    hoscode: "1004",
+    depcode: "200048521",
+    depname: "妇科计划生育门诊",
+    intro: "妇科计划生育门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.672Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.672Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce81"),
+    hoscode: "1004",
+    depcode: "200048522",
+    depname: "综合妇科门诊",
+    intro: "综合妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.723Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.723Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce82"),
+    hoscode: "1004",
+    depcode: "200048523",
+    depname: "妇科肿瘤门诊",
+    intro: "妇科肿瘤门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.761Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.761Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce83"),
+    hoscode: "1004",
+    depcode: "200004078",
+    depname: "妇产科辅助生育中心",
+    intro: "妇产科辅助生育中心",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.794Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.794Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce84"),
+    hoscode: "1004",
+    depcode: "200004073",
+    depname: "妇科门诊",
+    intro: "妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.83Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.83Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce85"),
+    hoscode: "1004",
+    depcode: "200004074",
+    depname: "妇科门诊(西院)",
+    intro: "妇科门诊(西院)",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.889Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.889Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce86"),
+    hoscode: "1004",
+    depcode: "200004075",
+    depname: "特需妇科门诊",
+    intro: "特需妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.923Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.923Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce87"),
+    hoscode: "1004",
+    depcode: "200004076",
+    depname: "特需妇科门诊(西院)1",
+    intro: "特需妇科门诊(西院)1",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.956Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.956Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb962bff8373f119ce88"),
+    hoscode: "1004",
+    depcode: "200004080",
+    depname: "妇科内分泌门诊",
+    intro: "妇科内分泌门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:30.985Z"),
+    updateTime: ISODate("2024-03-10T13:54:30.985Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce89"),
+    hoscode: "1004",
+    depcode: "200004081",
+    depname: "特需妇科内分泌门诊",
+    intro: "特需妇科内分泌门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:31.013Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.013Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce8a"),
+    hoscode: "1004",
+    depcode: "200004082",
+    depname: "特需妇科内分泌门诊(西院)",
+    intro: "特需妇科内分泌门诊(西院)",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:31.048Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.048Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce8b"),
+    hoscode: "1004",
+    depcode: "200004077",
+    depname: "产科门诊",
+    intro: "产科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2024-03-10T13:54:31.078Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.078Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce8c"),
+    hoscode: "1004",
+    depcode: "200004084",
+    depname: "儿科门诊",
+    intro: "儿科门诊",
+    bigcode: "2543ade3aecd3f5a3e2329d068c1d367",
+    bigname: "儿科",
+    createTime: ISODate("2024-03-10T13:54:31.104Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.104Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce8d"),
+    hoscode: "1004",
+    depcode: "200004085",
+    depname: "特需儿科门诊",
+    intro: "特需儿科门诊",
+    bigcode: "2543ade3aecd3f5a3e2329d068c1d367",
+    bigname: "儿科",
+    createTime: ISODate("2024-03-10T13:54:31.134Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.134Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce8e"),
+    hoscode: "1004",
+    depcode: "200004094",
+    depname: "变态反应科门诊",
+    intro: "变态反应科门诊",
+    bigcode: "e7391935e2070acf94e87b5b6f104f68",
+    bigname: "变态反应科",
+    createTime: ISODate("2024-03-10T13:54:31.17Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.17Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce8f"),
+    hoscode: "1004",
+    depcode: "200004095",
+    depname: "特需变态反应科门诊",
+    intro: "特需变态反应科门诊",
+    bigcode: "e7391935e2070acf94e87b5b6f104f68",
+    bigname: "变态反应科",
+    createTime: ISODate("2024-03-10T13:54:31.197Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.197Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce90"),
+    hoscode: "1004",
+    depcode: "200048325",
+    depname: "特需皮肤科门诊2",
+    intro: "特需皮肤科门诊2",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.225Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.225Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce91"),
+    hoscode: "1004",
+    depcode: "200048377",
+    depname: "皮科激光中心",
+    intro: "皮科激光中心",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.255Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.255Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce92"),
+    hoscode: "1004",
+    depcode: "200048468",
+    depname: "普通皮科复诊",
+    intro: "普通皮科复诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.34Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.34Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce93"),
+    hoscode: "1004",
+    depcode: "200048529",
+    depname: "特需口腔科门诊2",
+    intro: "特需口腔科门诊2",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.369Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.369Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce94"),
+    hoscode: "1004",
+    depcode: "200004107",
+    depname: "皮肤科白癜风副教授门诊",
+    intro: "皮肤科白癜风副教授门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.395Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.395Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce95"),
+    hoscode: "1004",
+    depcode: "200004108",
+    depname: "皮肤科普通皮科门诊",
+    intro: "皮肤科普通皮科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.424Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.424Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce96"),
+    hoscode: "1004",
+    depcode: "200004119",
+    depname: "美容皮肤科门诊",
+    intro: "美容皮肤科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.454Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.454Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce97"),
+    hoscode: "1004",
+    depcode: "200004086",
+    depname: "眼科门诊",
+    intro: "眼科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.484Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.484Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce98"),
+    hoscode: "1004",
+    depcode: "200004087",
+    depname: "眼科门诊(西院)",
+    intro: "眼科门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.514Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.514Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce99"),
+    hoscode: "1004",
+    depcode: "200004088",
+    depname: "特需眼科门诊",
+    intro: "特需眼科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.547Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.547Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce9a"),
+    hoscode: "1004",
+    depcode: "200004089",
+    depname: "眼科糖尿病视网膜病专科",
+    intro: "眼科糖尿病视网膜病专科",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.573Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.573Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce9b"),
+    hoscode: "1004",
+    depcode: "200004096",
+    depname: "口腔科门诊",
+    intro: "口腔科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.609Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.609Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce9c"),
+    hoscode: "1004",
+    depcode: "200004097",
+    depname: "口腔科门诊(西院)",
+    intro: "口腔科门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.638Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.638Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce9d"),
+    hoscode: "1004",
+    depcode: "200004101",
+    depname: "口腔科住院医门诊",
+    intro: "口腔科住院医门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.669Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.669Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce9e"),
+    hoscode: "1004",
+    depcode: "200004098",
+    depname: "口腔科洁牙门诊",
+    intro: "口腔科洁牙门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.703Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.703Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119ce9f"),
+    hoscode: "1004",
+    depcode: "200004099",
+    depname: "特需口腔外科门诊",
+    intro: "特需口腔外科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.785Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.785Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119cea0"),
+    hoscode: "1004",
+    depcode: "200004100",
+    depname: "口腔科特需门诊(西院)",
+    intro: "口腔科特需门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.909Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.909Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119cea1"),
+    hoscode: "1004",
+    depcode: "200004090",
+    depname: "耳鼻喉科门诊",
+    intro: "耳鼻喉科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.954Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.954Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb972bff8373f119cea2"),
+    hoscode: "1004",
+    depcode: "200004091",
+    depname: "耳鼻喉科门诊(西院)",
+    intro: "耳鼻喉科门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:31.994Z"),
+    updateTime: ISODate("2024-03-10T13:54:31.994Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119cea3"),
+    hoscode: "1004",
+    depcode: "200004093",
+    depname: "特需耳鼻喉科门诊",
+    intro: "特需耳鼻喉科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:32.033Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.033Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119cea4"),
+    hoscode: "1004",
+    depcode: "200004102",
+    depname: "皮科门诊",
+    intro: "皮科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:32.062Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.062Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119cea5"),
+    hoscode: "1004",
+    depcode: "200004103",
+    depname: "皮科门诊(西院)",
+    intro: "皮科门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:32.094Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.094Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119cea6"),
+    hoscode: "1004",
+    depcode: "200004104",
+    depname: "皮肤科性病门诊",
+    intro: "皮肤科性病门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:32.122Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.122Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119cea7"),
+    hoscode: "1004",
+    depcode: "200004106",
+    depname: "特需皮肤科门诊",
+    intro: "特需皮肤科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2024-03-10T13:54:32.152Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.152Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119cea8"),
+    hoscode: "1004",
+    depcode: "200041040",
+    depname: "特需中医科门诊2",
+    intro: "特需中医科门诊2",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2024-03-10T13:54:32.182Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.182Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119cea9"),
+    hoscode: "1004",
+    depcode: "200048480",
+    depname: "卫干门诊(中医科)",
+    intro: "卫干门诊(中医科)",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2024-03-10T13:54:32.217Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.217Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceaa"),
+    hoscode: "1004",
+    depcode: "200004112",
+    depname: "中医科针灸室(西院)",
+    intro: "中医科针灸室(西院)",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2024-03-10T13:54:32.248Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.248Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceab"),
+    hoscode: "1004",
+    depcode: "200004110",
+    depname: "中医科针灸室",
+    intro: "中医科针灸室",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2024-03-10T13:54:32.275Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.275Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceac"),
+    hoscode: "1004",
+    depcode: "200004109",
+    depname: "中医科门诊",
+    intro: "中医科门诊",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2024-03-10T13:54:32.305Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.305Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119cead"),
+    hoscode: "1004",
+    depcode: "200004111",
+    depname: "中医科门诊(西院)",
+    intro: "中医科门诊(西院)",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2024-03-10T13:54:32.334Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.334Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceae"),
+    hoscode: "1004",
+    depcode: "200004113",
+    depname: "特需中医科门诊1",
+    intro: "特需中医科门诊1",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2024-03-10T13:54:32.394Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.394Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceaf"),
+    hoscode: "1004",
+    depcode: "200048262",
+    depname: "临床营养科西院门诊",
+    intro: "临床营养科西院门诊",
+    bigcode: "4dcb42d3a6ca39589f20bcd160903ae9",
+    bigname: "营养科",
+    createTime: ISODate("2024-03-10T13:54:32.476Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.476Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceb0"),
+    hoscode: "1004",
+    depcode: "200047302",
+    depname: "特需营养科门诊1",
+    intro: "特需营养科门诊1",
+    bigcode: "4dcb42d3a6ca39589f20bcd160903ae9",
+    bigname: "营养科",
+    createTime: ISODate("2024-03-10T13:54:32.524Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.524Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceb1"),
+    hoscode: "1004",
+    depcode: "200004133",
+    depname: "营养科咨询门诊",
+    intro: "营养科咨询门诊",
+    bigcode: "4dcb42d3a6ca39589f20bcd160903ae9",
+    bigname: "营养科",
+    createTime: ISODate("2024-03-10T13:54:32.559Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.559Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceb2"),
+    hoscode: "1004",
+    depcode: "200040878",
+    depname: "多发性硬化专科门诊",
+    intro: "多发性硬化专科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:32.617Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.617Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceb3"),
+    hoscode: "1004",
+    depcode: "200040182",
+    depname: "运动障碍病专科门诊",
+    intro: "运动障碍病专科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:32.65Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.65Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceb4"),
+    hoscode: "1004",
+    depcode: "200048482",
+    depname: "特需病理科门诊",
+    intro: "特需病理科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:32.771Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.771Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceb5"),
+    hoscode: "1004",
+    depcode: "200048483",
+    depname: "病理科门诊",
+    intro: "病理科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:32.829Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.829Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceb6"),
+    hoscode: "1004",
+    depcode: "200004057",
+    depname: "麻醉科门诊",
+    intro: "麻醉科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:32.883Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.883Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceb7"),
+    hoscode: "1004",
+    depcode: "200004124",
+    depname: "放疗科门诊",
+    intro: "放疗科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:32.913Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.913Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb982bff8373f119ceb8"),
+    hoscode: "1004",
+    depcode: "200004125",
+    depname: "放疗科门诊(西院)",
+    intro: "放疗科门诊(西院)",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:32.972Z"),
+    updateTime: ISODate("2024-03-10T13:54:32.972Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119ceb9"),
+    hoscode: "1004",
+    depcode: "200004126",
+    depname: "特需放疗科门诊",
+    intro: "特需放疗科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.006Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.006Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119ceba"),
+    hoscode: "1004",
+    depcode: "200004117",
+    depname: "心理医学科门诊",
+    intro: "心理医学科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.035Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.035Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119cebb"),
+    hoscode: "1004",
+    depcode: "200004118",
+    depname: "特需心理医学科门诊1",
+    intro: "特需心理医学科门诊1",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.068Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.068Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119cebc"),
+    hoscode: "1004",
+    depcode: "200004123",
+    depname: "介入治疗门诊(放射科)",
+    intro: "介入治疗门诊(放射科)",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.101Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.101Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119cebd"),
+    hoscode: "1004",
+    depcode: "200004130",
+    depname: "超声介入门诊",
+    intro: "超声介入门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.144Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.144Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119cebe"),
+    hoscode: "1004",
+    depcode: "200004129",
+    depname: "物理医学康复科门诊",
+    intro: "物理医学康复科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.179Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.179Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119cebf"),
+    hoscode: "1004",
+    depcode: "200004127",
+    depname: "物理医学康复科门诊(西院)",
+    intro: "物理医学康复科门诊(西院)",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.215Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.215Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119cec0"),
+    hoscode: "1004",
+    depcode: "200004120",
+    depname: "肠外肠内营养科门诊",
+    intro: "肠外肠内营养科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.253Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.253Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119cec1"),
+    hoscode: "1004",
+    depcode: "200004122",
+    depname: "特需肠外肠内营养科门诊",
+    intro: "特需肠外肠内营养科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.296Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.296Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119cec2"),
+    hoscode: "1004",
+    depcode: "200004131",
+    depname: "核医学科门诊",
+    intro: "核医学科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.335Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.335Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119cec3"),
+    hoscode: "1004",
+    depcode: "200004132",
+    depname: "特需核医学门诊",
+    intro: "特需核医学门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.37Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.37Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119cec4"),
+    hoscode: "1004",
+    depcode: "200004055",
+    depname: "麻醉科",
+    intro: "麻醉科",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.413Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.413Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb992bff8373f119cec5"),
+    hoscode: "1004",
+    depcode: "200004056",
+    depname: "麻醉科疼痛门诊",
+    intro: "麻醉科疼痛门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2024-03-10T13:54:33.448Z"),
+    updateTime: ISODate("2024-03-10T13:54:33.448Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119cec6"),
+    hoscode: "1004",
+    depcode: "200040142",
+    depname: "肾内科IGA肾病专病门诊",
+    intro: "肾内科IGA肾病专病门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.097Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.097Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119cec7"),
+    hoscode: "1004",
+    depcode: "200048338",
+    depname: "检验科门诊",
+    intro: "检验科门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.13Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.13Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119cec8"),
+    hoscode: "1004",
+    depcode: "200048491",
+    depname: "门诊部疑难病会诊中心(东院)",
+    intro: "门诊部疑难病会诊中心(东院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.194Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.194Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119cec9"),
+    hoscode: "1004",
+    depcode: "200048571",
+    depname: "加速器治疗室(放疗科)(西院)",
+    intro: "加速器治疗室(放疗科)(西院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.242Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.242Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119ceca"),
+    hoscode: "1004",
+    depcode: "200048575",
+    depname: "生殖中心门诊(西院)",
+    intro: "生殖中心门诊(西院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.331Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.331Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119cecb"),
+    hoscode: "1004",
+    depcode: "200004013",
+    depname: "帕金森专病门诊",
+    intro: "帕金森专病门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.368Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.368Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119cecc"),
+    hoscode: "1004",
+    depcode: "200004037",
+    depname: "癫痫门诊",
+    intro: "癫痫门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.426Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.426Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119cecd"),
+    hoscode: "1004",
+    depcode: "200004021",
+    depname: "老年医学科门诊",
+    intro: "老年医学科门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.475Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.475Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119cece"),
+    hoscode: "1004",
+    depcode: "200004038",
+    depname: "神经外科垂体专病门诊",
+    intro: "神经外科垂体专病门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.501Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.501Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119cecf"),
+    hoscode: "1004",
+    depcode: "200004039",
+    depname: "神经外科脊髓疾病专科门诊",
+    intro: "神经外科脊髓疾病专科门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.53Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.53Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119ced0"),
+    hoscode: "1004",
+    depcode: "200004048",
+    depname: "泌尿外科泌尿结石门诊",
+    intro: "泌尿外科泌尿结石门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.569Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.569Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119ced1"),
+    hoscode: "1004",
+    depcode: "200004050",
+    depname: "泌尿外科膀胱癌专科门诊",
+    intro: "泌尿外科膀胱癌专科门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.612Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.612Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119ced2"),
+    hoscode: "1004",
+    depcode: "200004024",
+    depname: "基本外科肠造口门诊",
+    intro: "基本外科肠造口门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.77Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.77Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119ced3"),
+    hoscode: "1004",
+    depcode: "200004092",
+    depname: "耳聋基因筛查遗传门诊",
+    intro: "耳聋基因筛查遗传门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.821Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.821Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119ced4"),
+    hoscode: "1004",
+    depcode: "200004128",
+    depname: "特需康复理疗门诊2",
+    intro: "特需康复理疗门诊2",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.877Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.877Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119ced5"),
+    hoscode: "1004",
+    depcode: "200004036",
+    depname: "疼痛门诊",
+    intro: "疼痛门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.947Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.947Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9a2bff8373f119ced6"),
+    hoscode: "1004",
+    depcode: "200004058",
+    depname: "特需麻醉科门诊2",
+    intro: "特需麻醉科门诊2",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:34.994Z"),
+    updateTime: ISODate("2024-03-10T13:54:34.994Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119ced7"),
+    hoscode: "1004",
+    depcode: "200004135",
+    depname: "针灸按摩室(西院)",
+    intro: "针灸按摩室(西院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:35.031Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.031Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119ced8"),
+    hoscode: "1004",
+    depcode: "200004121",
+    depname: "肠外肠内营养科门诊(西院)",
+    intro: "肠外肠内营养科门诊(西院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:35.066Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.066Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119ced9"),
+    hoscode: "1004",
+    depcode: "200041160",
+    depname: "特需放射科门诊1",
+    intro: "特需放射科门诊1",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2024-03-10T13:54:35.098Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.098Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119ceda"),
+    hoscode: "1004",
+    depcode: "200048271",
+    depname: "国际医疗(儿科)",
+    intro: "国际医疗(儿科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.133Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.133Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cedb"),
+    hoscode: "1004",
+    depcode: "200048272",
+    depname: "国际医疗(预防接种)",
+    intro: "国际医疗(预防接种)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.174Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.174Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cedc"),
+    hoscode: "1004",
+    depcode: "200048273",
+    depname: "国际医疗(神经科)",
+    intro: "国际医疗(神经科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.208Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.208Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cedd"),
+    hoscode: "1004",
+    depcode: "200048274",
+    depname: "国际医疗(胸外科)",
+    intro: "国际医疗(胸外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.243Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.243Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cede"),
+    hoscode: "1004",
+    depcode: "200048278",
+    depname: "国际医疗(内分泌科)",
+    intro: "国际医疗(内分泌科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.275Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.275Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cedf"),
+    hoscode: "1004",
+    depcode: "200048279",
+    depname: "基本外科门诊(西院国际医疗)",
+    intro: "基本外科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.31Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.31Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cee0"),
+    hoscode: "1004",
+    depcode: "200048280",
+    depname: "内分泌科门诊(西院国际医疗)",
+    intro: "内分泌科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.342Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.342Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cee1"),
+    hoscode: "1004",
+    depcode: "200048281",
+    depname: "国际医疗(消化内科)",
+    intro: "国际医疗(消化内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.376Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.376Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cee2"),
+    hoscode: "1004",
+    depcode: "200048282",
+    depname: "国际医疗(普通内科)",
+    intro: "国际医疗(普通内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.405Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.405Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cee3"),
+    hoscode: "1004",
+    depcode: "200048283",
+    depname: "国际医疗(皮肤科)",
+    intro: "国际医疗(皮肤科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.434Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.434Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cee4"),
+    hoscode: "1004",
+    depcode: "200048286",
+    depname: "消化内科门诊(西院国际医疗)",
+    intro: "消化内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.467Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.467Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cee5"),
+    hoscode: "1004",
+    depcode: "200048288",
+    depname: "国际医疗(感染内科)",
+    intro: "国际医疗(感染内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.496Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.496Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cee6"),
+    hoscode: "1004",
+    depcode: "200048289",
+    depname: "国际医疗(变态反应科)",
+    intro: "国际医疗(变态反应科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.534Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.534Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cee7"),
+    hoscode: "1004",
+    depcode: "200048290",
+    depname: "国际医疗(免疫内科)",
+    intro: "国际医疗(免疫内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.569Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.569Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cee8"),
+    hoscode: "1004",
+    depcode: "200048293",
+    depname: "国际医疗(中医科)",
+    intro: "国际医疗(中医科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.609Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.609Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cee9"),
+    hoscode: "1004",
+    depcode: "200048294",
+    depname: "国际医疗(呼吸内科)",
+    intro: "国际医疗(呼吸内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.654Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.654Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119ceea"),
+    hoscode: "1004",
+    depcode: "200048297",
+    depname: "国际医疗(美容外科)",
+    intro: "国际医疗(美容外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.685Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.685Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119ceeb"),
+    hoscode: "1004",
+    depcode: "200048298",
+    depname: "国际医疗(产科)",
+    intro: "国际医疗(产科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.717Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.717Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119ceec"),
+    hoscode: "1004",
+    depcode: "200048299",
+    depname: "医学美容中心外科门诊(西院国际医疗)",
+    intro: "医学美容中心外科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.754Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.754Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119ceed"),
+    hoscode: "1004",
+    depcode: "200048300",
+    depname: "国际医疗(血管外科)",
+    intro: "国际医疗(血管外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.783Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.783Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119ceee"),
+    hoscode: "1004",
+    depcode: "200048301",
+    depname: "核医学科(西院国际医疗)",
+    intro: "核医学科(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.808Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.808Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119ceef"),
+    hoscode: "1004",
+    depcode: "200048304",
+    depname: "国际医疗(妇科内分泌)",
+    intro: "国际医疗(妇科内分泌)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.849Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.849Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cef0"),
+    hoscode: "1004",
+    depcode: "200048308",
+    depname: "变态（过敏）反应科门诊(西院国际医疗)",
+    intro: "变态（过敏）反应科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.878Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.878Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cef1"),
+    hoscode: "1004",
+    depcode: "200048309",
+    depname: "免疫内科门诊(西院国际医疗)",
+    intro: "免疫内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.908Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.908Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cef2"),
+    hoscode: "1004",
+    depcode: "200048310",
+    depname: "国际医疗(骨科)",
+    intro: "国际医疗(骨科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.942Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.942Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9b2bff8373f119cef3"),
+    hoscode: "1004",
+    depcode: "200048311",
+    depname: "口腔科门诊(西院国际医疗)",
+    intro: "口腔科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:35.985Z"),
+    updateTime: ISODate("2024-03-10T13:54:35.985Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cef4"),
+    hoscode: "1004",
+    depcode: "200048312",
+    depname: "国际医疗(泌尿外科)",
+    intro: "国际医疗(泌尿外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.025Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.025Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cef5"),
+    hoscode: "1004",
+    depcode: "200048313",
+    depname: "国际医疗(核医学科)",
+    intro: "国际医疗(核医学科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.066Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.066Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cef6"),
+    hoscode: "1004",
+    depcode: "200048314",
+    depname: "内分泌与生殖妇科中心门诊(西院国际医疗)",
+    intro: "内分泌与生殖妇科中心门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.112Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.112Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cef7"),
+    hoscode: "1004",
+    depcode: "200048315",
+    depname: "国际医疗(血液科)",
+    intro: "国际医疗(血液科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.158Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.158Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cef8"),
+    hoscode: "1004",
+    depcode: "200048316",
+    depname: "国际医疗(美容皮肤科)",
+    intro: "国际医疗(美容皮肤科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.216Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.216Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cef9"),
+    hoscode: "1004",
+    depcode: "200048317",
+    depname: "国际医疗(耳鼻喉科)",
+    intro: "国际医疗(耳鼻喉科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.265Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.265Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cefa"),
+    hoscode: "1004",
+    depcode: "200048318",
+    depname: "国际医疗(神经外科)",
+    intro: "国际医疗(神经外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.298Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.298Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cefb"),
+    hoscode: "1004",
+    depcode: "200048319",
+    depname: "肿瘤内科门诊(西院国际医疗)",
+    intro: "肿瘤内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.333Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.333Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cefc"),
+    hoscode: "1004",
+    depcode: "200048320",
+    depname: "耳鼻喉科门诊(西院国际医疗)",
+    intro: "耳鼻喉科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.373Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.373Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cefd"),
+    hoscode: "1004",
+    depcode: "200048326",
+    depname: "国际医疗(针灸按摩室)",
+    intro: "国际医疗(针灸按摩室)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.401Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.401Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cefe"),
+    hoscode: "1004",
+    depcode: "200048327",
+    depname: "国际医疗(心内科)",
+    intro: "国际医疗(心内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.452Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.452Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119ceff"),
+    hoscode: "1004",
+    depcode: "200048328",
+    depname: "国际医疗(口腔科)",
+    intro: "国际医疗(口腔科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.495Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.495Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf00"),
+    hoscode: "1004",
+    depcode: "200048329",
+    depname: "国际医疗(麻醉科)",
+    intro: "国际医疗(麻醉科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.587Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.587Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf01"),
+    hoscode: "1004",
+    depcode: "200048330",
+    depname: "神经科门诊(西院国际医疗)",
+    intro: "神经科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.622Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.622Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf02"),
+    hoscode: "1004",
+    depcode: "200048332",
+    depname: "呼吸内科门诊(西院国际医疗)",
+    intro: "呼吸内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.649Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.649Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf03"),
+    hoscode: "1004",
+    depcode: "200048333",
+    depname: "国际医疗(物理医学康复科)",
+    intro: "国际医疗(物理医学康复科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.676Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.676Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf04"),
+    hoscode: "1004",
+    depcode: "200048334",
+    depname: "心内科门诊(西院国际医疗)",
+    intro: "心内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.701Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.701Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf05"),
+    hoscode: "1004",
+    depcode: "200048335",
+    depname: "肾内科门诊(西院国际医疗)",
+    intro: "肾内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.73Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.73Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf06"),
+    hoscode: "1004",
+    depcode: "200048346",
+    depname: "国际医疗(基本外科)",
+    intro: "国际医疗(基本外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.759Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.759Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf07"),
+    hoscode: "1004",
+    depcode: "200048347",
+    depname: "乳腺外科门诊(西院国际医疗)",
+    intro: "乳腺外科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.789Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.789Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf08"),
+    hoscode: "1004",
+    depcode: "200048348",
+    depname: "国际医疗(肾内科)",
+    intro: "国际医疗(肾内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.818Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.818Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf09"),
+    hoscode: "1004",
+    depcode: "200048349",
+    depname: "皮肤科门诊(西院国际医疗)",
+    intro: "皮肤科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.849Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.849Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf0a"),
+    hoscode: "1004",
+    depcode: "200048350",
+    depname: "国际医疗(眼科)",
+    intro: "国际医疗(眼科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.893Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.893Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf0b"),
+    hoscode: "1004",
+    depcode: "200048352",
+    depname: "国际医疗(肝脏外科)",
+    intro: "国际医疗(肝脏外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.931Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.931Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf0c"),
+    hoscode: "1004",
+    depcode: "200048353",
+    depname: "眼科门诊(西院国际医疗)",
+    intro: "眼科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.96Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.96Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9c2bff8373f119cf0d"),
+    hoscode: "1004",
+    depcode: "200048355",
+    depname: "麻醉科(西院国际医疗)",
+    intro: "麻醉科(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:36.99Z"),
+    updateTime: ISODate("2024-03-10T13:54:36.99Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf0e"),
+    hoscode: "1004",
+    depcode: "200048356",
+    depname: "国际医疗(肿瘤内科)",
+    intro: "国际医疗(肿瘤内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.019Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.019Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf0f"),
+    hoscode: "1004",
+    depcode: "200048366",
+    depname: "国际医疗(营养科)",
+    intro: "国际医疗(营养科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.055Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.055Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf10"),
+    hoscode: "1004",
+    depcode: "200048368",
+    depname: "国际医疗(放射治疗科)",
+    intro: "国际医疗(放射治疗科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.104Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.104Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf11"),
+    hoscode: "1004",
+    depcode: "200048379",
+    depname: "国际医疗部特约门诊",
+    intro: "国际医疗部特约门诊",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.148Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.148Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf12"),
+    hoscode: "1004",
+    depcode: "200048465",
+    depname: "物理医学康复科(西院国际医疗)",
+    intro: "物理医学康复科(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.183Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.183Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf13"),
+    hoscode: "1004",
+    depcode: "200048467",
+    depname: "泌尿外科门诊(西院国际医疗)",
+    intro: "泌尿外科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.213Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.213Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf14"),
+    hoscode: "1004",
+    depcode: "200048470",
+    depname: "国际医疗(肠外肠内营养科)",
+    intro: "国际医疗(肠外肠内营养科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.26Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.26Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf15"),
+    hoscode: "1004",
+    depcode: "200048485",
+    depname: "国际医疗(老年医学科)",
+    intro: "国际医疗(老年医学科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.293Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.293Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf16"),
+    hoscode: "1004",
+    depcode: "200048486",
+    depname: "普通内科门诊(西院国际医疗)",
+    intro: "普通内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.331Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.331Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf17"),
+    hoscode: "1004",
+    depcode: "200048513",
+    depname: "医学美容中心门诊(西院国际医疗)",
+    intro: "医学美容中心门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.362Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.362Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf18"),
+    hoscode: "1004",
+    depcode: "200048524",
+    depname: "国际医疗(妇科肿瘤)",
+    intro: "国际医疗(妇科肿瘤)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.395Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.395Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf19"),
+    hoscode: "1004",
+    depcode: "200048525",
+    depname: "国际医疗(综合妇科)",
+    intro: "国际医疗(综合妇科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.425Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.425Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf1a"),
+    hoscode: "1004",
+    depcode: "200048526",
+    depname: "国际医疗(妇科计划生育)",
+    intro: "国际医疗(妇科计划生育)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.457Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.457Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf1b"),
+    hoscode: "1004",
+    depcode: "200048536",
+    depname: "骨科门诊(西院国际医疗)",
+    intro: "骨科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.486Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.486Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf1c"),
+    hoscode: "1004",
+    depcode: "200048559",
+    depname: "国际医疗(放射科)",
+    intro: "国际医疗(放射科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.514Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.514Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf1d"),
+    hoscode: "1004",
+    depcode: "200048585",
+    depname: "老年医学门诊(西院国际医疗)",
+    intro: "老年医学门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.539Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.539Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf1e"),
+    hoscode: "1004",
+    depcode: "200048644",
+    depname: "儿科门诊(西院国际医疗)",
+    intro: "儿科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.566Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.566Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf1f"),
+    hoscode: "1004",
+    depcode: "200004114",
+    depname: "国际医疗(妇科)",
+    intro: "国际医疗(妇科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.593Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.593Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("65edbb9d2bff8373f119cf20"),
+    hoscode: "1004",
+    depcode: "200004115",
+    depname: "国际医疗(心理医学科)",
+    intro: "国际医疗(心理医学科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2024-03-10T13:54:37.621Z"),
+    updateTime: ISODate("2024-03-10T13:54:37.621Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Department"
+} ]);
+
+// ----------------------------
+// Collection structure for Hospital
+// ----------------------------
+db.getCollection("Hospital").drop();
+db.createCollection("Hospital");
+db.getCollection("Hospital").createIndex({
+    hoscode: NumberInt("1")
+}, {
+    name: "hoscode",
+    unique: true
+});
+db.getCollection("Hospital").createIndex({
+    hosname: NumberInt("1")
+}, {
+    name: "hosname"
+});
+
+// ----------------------------
+// Documents of Hospital
+// ----------------------------
+db.getCollection("Hospital").insert([ {
+    _id: ObjectId("65eb64315e94be2ab99b84f9"),
+    hoscode: "1004",
+    hosname: "珠海市人民医院",
+    hostype: "1",
+    provinceCode: "519000",
+    cityCode: "519000",
+    districtCode: "110102",
+    address: "康宁路79号",
+    logoData: "iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAADAFBMVEUAAAD///////////7////9/v3///0BTyP8/f39/v///v/8/Pv6 vv//P8DTyb8/f6orrMFTSYITSWosLX7/v7 /f0ETiQBUCYCTyWmr7WorrEBUSMETiL8 /3m6uuosLQGTSL6/PsGTyTKztIKTCnS19oMSSgGTSQJSyOmsLIBUiX5 vn6/P0HTSkHUCgMTCags7H3 vz  /0HSyb5/v2lrrGqr7K9w8cCUCExY0z2/foPSCcKSiW5vsKct7D19vf7// yuLwTTi4NSCwISiejsLSjs7KArZAMSSOksrDy9fctYUT9 fr1 fru8PH5// 0ur3v8/Sus7ddjXGHqJ0fWDgRRiv4 Pjp6 zg4uSqsredta4mXEPR1NYaUTWqsLSqrrT2/v3q7vDf4OAyZ0eetLMPTCnz/ffa3 GioqJaj3MnYkCWq6arsrTl5ueZuKxfjXTMzM2YurCvtbmmsrXh5ujAxsm6wcU3a0yNpZ90l4mhsrYTSCrGy86/v79BdVkNUCyRs5w4ZUj1 /ft7e5rnIFDcVrX295oi3xBQUHM0dR oZRMd13HzdDt/fawsLGHr5iBspYUVDHz8/OqqqqdnZ2HqpWBgYEDAwPU2NthYWFIemBdi3jc4eNkinPc3NyMtp12nYt8mYtciG1 nZJGd1sjVDry/vyrtrdSeWXDycyhtK08Z1EzMzNrln7HycihsK50mYJvlIIaSzHv/vqdvqlTgGs9bFiHqY8fXjrR597Y2NjDw8S5vL16enrh8OiSr6ZLcV9aWlpQUFAyX0XPz9Du fKYsasrKyvG2c9 oY 2vcFBelq70se3t7dZe2xpaWksWEG3zL9ycnIbGxvk9e2Yt6OPj49FbVcxbEsXRC7q8u/G4NOIoZZHR0cgICDZ7 Oy0MBLgmUzbU4rZ0exyLukx7VXi23Z5 CmwLF6powkJCTn /Jmhne92cuRqptZgW45cVOo1byWlpZghXITExOLrqGIiIhjlXg6OjoLCwvQ4deSvaZwoYdwjX45X02 EIt2AAAABHRSTlMAv0BA zTRIgAAUuNJREFUeNrs1z1Lw0Acx3HR x93QblAkqEBucEp6FKwdgpt1oC1cfEBiqBLF6dSO2UWfAcdfAO Bekr8E15l3QqDralmpDfJ7k8HJm XCDZAwAAAAAAAAAAAAAAAAAAgIrb39DBQXnar5mtYrENcV6eWM0g1orqxWL1tF2shkGsGsTivIbv4j/F4oj1W4jVAIiFWAXEWgNirQGx1oBYa2hQrB  xOwEsVVE7E9UOBa3mCHNcAxGBiehqKhDPpEgxx5o aiUbJcqHMvWcqwilkUlQWUdEkJQYCeEQ5wt7fDnoOqxjo5MpPKacfIN1b7sZVlq9W5Oj5W0K00yq4jU0FhOEJhWZSxptR/Hby/d GsxHCZJMkwWcdzNR PHS7/f77PGxiJOJAKTSyqzSZFN5/lsoj3tas9wC1pr1y3uJt18Ph0oQeQrdUoUBMR2oKKxWGCGIqV8f3A3ml2HbqQ7LdPF7NoOrb2Oa1t1Wq3WveddPFyEz7OTu/TqTB3SYaNiOVwI0T/PXj8moY6iThRFYTiJ89Hn0/R2kKZt35fttJfdTsfztzy DsMH7dqFdp/k75lUokmxvsk3 5g26jCO/8Pv8rvenVfpXSKNx 0nMK13G/a8dvEYQufb0rUrRSdQU1jRUOLsfEGKmuI2q2JQqqIxWXS OxwSX0Y3M6JBk4lhE82WYCZiwuY2nUF8ifGfzZfnyphY2IzOuKrf0QF3vevdh f3PM/v T0nUiIp7KwCUHKBw3V7Szy8qREAqbzITcdFCw1f/LQr44WMN v12GymmTW43w7X/g9gWRBmMRIlmi28tdq6enVotf3leOemx/gATQd0RJ3qUIrSlNbwWw vroZhutoTLuRpTdIUShM5 m/Jv3IH1nQEs3CayKvCys6XL7riyoted7VtrHVyPpAgSTziLCc/PlBJUaKP4yqdheHddvdqW4PLUwLjkWBKhONOT7kJK0/iJH9zucNlC1mr481eQmhe831aqCQJJWqnvGkaIQxZma4TWgg 81YIxmOBra01ouuw TRx5RisEzMbb2eLG5KC1W/V ThaJ0jQIwN39I MDkzq BS3bOEACBJoSFox4jhe8HcssdsgbnpKvAINO/NOQ7kFCyHMIIRoemV7zGp326s2PqZxGq9HdFUI9FxT3P3F5sQvAxE6ayU7GxYjKlhJ6kQDWHCyYNhjtztcsa4gLXEMwn8xQuYeLERUQWiMu2WHy91bKHFEh22MJNEqT4ZXXZB/dn5iJAJJ slsiw5U5oFzY5Ro6ughg2V5SmQQr659y 2W7bH2oIoxw/43YOUhAslnXHa5rNWdQZ6XJMRrGjGihiEIZPK70gUXLugbJPSpYMFgU/TUwIYnEzsnk5JkES2cBAJblR2xWNdjzH/FsqDa4u1qsFtDL5dUSBKLQBwdSf/c3z/l7EkfXlV6cHHphqjp4E/qtURNE40j 65dft55S38YIpKFg5SMN1/eopDr9tsfvrUG/VthWajjYkSEBcFfErK53C1hrzBjKbSojCTWL92mp57rb7rlkbL /T0RZySi4WzMeiSi8mrANCPn8JOXrT/7wnOX3hyB5AqEKiGhQHne9x62F1zh6QhIPk1ASLRYTtnFk3uwLFQmBCKKyROE1ip7gy0UrlBpcmJc6cZk38L6wfTEWKL 8A3FfROK8ulgWsqCVRmA1MJXA94KoOnJ5NGf1iXG9ryfDggCMpVnwmLVYJdNlhuqamlNx8gCH/4vgzWdL2CKqMG47Giw93oFFWH8mxOKpEe/3Ty a/ uY9uHt9489cauOxL97yh4ThSU0g88tHcoCkpNvpG4G76lI6wvEAAvhjiOgio0ISoJ9trdbnuXn7BIpP5lsE4kV8TZUW13yOX3qmoeAs2MLp4TeqKpzQuXHYl /MZkumZ41VmLS5e/NImzPTsnTVxSXHzwlud2Pf/0Ld2Lf0z1OHlO8gkgOs/MrxB4RAGz/FqYaVpbNiGM/m2WlbEJUURKcEnMbW9pVmfgzcCSfJKqpNYsqh8cevfZ5/Z795eev7Bs YqJbCctID4y uKWdz/YcfZZ5zclvh1JkxrIZiOaGSdmRU Oo9mSkKvAHvdihP o3pVzsJDE0GRTSHbZe4MqPVM6Pi7OV8PWpF4obtqWmrpk2cL1Px3I33zsvgVrvkRZZxGFQAByjOjQ B35Zzc9Ef3wU8OIGERhFcxaZtkwJ1poduUSt9XdstHJs4yYdyrlFiyoriPEVxQ5ZLm61SlJYhYsTe9JpZ5eekFiID11SemCc9Z35z SPnzemoE5lkVzHDvYV7zo7HMuPGfN1PsHV/20a9dnh0ZTPYQBx3iiNp xZBZ3QNRtiHtZ9t9kWSYsprHK4Qgt8aqqRbNkJVDIeOX5FaX5O8qGjfSxHQuWfzW cyr94vI7GtHcaQ6KfpO4uLi0afmqrWnpvsTy0vxFC5d9NJJWTpwUYGUq hTDBMttLpdnLf/vgWXhdINUNFc3uNzPGEQLRCQt6x1MdGf grKt42MbIv6JFQcu Wr020MT9xRvj6BsB2/hkLH3gbHisgsuH9YkZV39zbdds33xueeuGoiCew/kZYk4wx7ZUb2RlSDdoKh56lw5BYsyU05V9cYbZIenUdJ1BvJJXzZOY9vYzm2TqbGXJnsO1x9ecVXq8J6XShfePBcWOD8ylJrcv6N0e1pVBxJPRpPR4e78xQv3pWjOMgeGALP1JS776vYayYSVvTunYMHIyKyO8o27G1z2uF SKnXk00g2A95Ip4eMSGrPwoHJ7ZufbHowMvru5YtumABYc4UVpOztvmE4EvHfefGO515dV7Y4//JEfxpgWebO2SXe3ynL7iVBwoiW2bRyDhYUUkxYqNVjtcfCqsrTuk6iI0M4G6okODnJSO9senDqkld3Fm/TjSP1TRuiejYsoIEkSWN/Ln5WEXQutn7R0vwF Rdffv8Twwaap4rFaIzE8s0xh8vTyKPfwcw9WBpHESI0V8tyeatOaojhTEZ/GUvhbMeNhEoB68aWpjf3b5nY9tVgDZv6 fkhg56brdGVlTQt7P1x1IcCnDjSv/C8s4ofGU5FddiZR2eVzbCPIQqj8bUtLgjDqjQ738o9WBaEDOfGmEtuC rG0Dc3GbrxcWJnSsuGRQkwYdGNrZcnJsYNxWAYlq1JJllpLqw8oFUpGNjng0P4msEnF539eUqjLKDshQrMMASmRYqm4WC52x3bpPK5DAtMplIPx1zW9gpiTOxL7Iwmx69N7DKkuRdNCzoiU9cmBqIsy0pEkhSGUdi59C3msMY1EtiYrlcabOrQz9exTrPsjrKX8RFmo1OXTgItgivecltDHU5h9v5cg4VoI y44vZOltc/3Vd2VlnK2LL 6iGWR/NMhzSJNzaMDSqqqvYYGh8xGDYwj7GKoqhpbE9AQpjjejQDfnb2cDRdiSgLlwULf7ln69eHkhhrkr8dlrc7 Nn7cwmWWSnGpNNqdYf9hJl4OrGwdM/kVWXvDkZ8DM2B5pngMmvZE/4MqgWW2ZPwP9MAAvPyHp3Ve156YeLY udGI6rq9L/2uD3UoRM2k0LkGiygpfg77Q0NG1nwQDXJwY 37B/v3zI5ddeIAYYQMNf slnl1bDsb7Agev1FRTSwvhrj TcOvPTd4tI323Wnk1U6HQVyhx/nJiyaVze67e4OlfexKhTtkqnUQ2PD4/2wGMHRAYA1Fy/LYGYG1uk8G9Wj UQj s0DHy C3OK885t GCCs5Oy8Qo41E H3Z80RWBzXAaxKVEnzEaLq6R72UOKLye2l90QjXEb0nFGIkDkMT1 SlPrxqYe2HPjqkwXnd39wcHHi aikcWqnyxqqq6RPVts/U7AwRVjp uqQPYzNzEAUAz090aG xMBAouyNVJI1kgZhCMYnHcHwhWgaRqJoETXxuBCPeNrcB1RPyVQTUyuW1X /4sL85aWLvxifOrh5PEkIrmm3OqpbeV5COQYLk8Jql6OIRfBnBFgE 5KPND2U/nHPtu/6jiZHt/fdHFUkfFJ/l nWouG aBAPbDCDTVRgjQL8CphPJawpg1sv 2rf8uX5xd/9 PKnHyzc c1EKulzxl0y5PK8mFOwECKNLVZHr58XARZMcWEsHq2vf2Jy3/j45U1QPL7ssrG9FfzJLYvneUi9vI2tzSXhoq6ioqKuznBJ81rokRQgg4exekpahNT4olMHvh2pv /Y1wPpB7sfPbZq2YEphfUusTfsDuaYZSH0WLkst3kFiRGhci4EKvWBXxIjh9dtSR9bVD8a3Zro35oi6GR3TOHH6sLxt2OO47JlVCDb7e7Y26 F1z6GTu3auHSPT n74qr6R5uej/Z8eSD/4ovPPyt/55dQ4aqCGX0NnzOwEGJY3tlud3iCaLrnX5e4T7d1l31sjI59O9S3qPSQMdzmDVTSM koFCcQFpHGQB1FRHgldABCnxo0emS6AEEFoMyWAmuB1Qo/eHrDtTSNMMEYIwtDz46eCCGn2pOOfn/WmnVPbHljw4bvzrug9KzFq5btOapjUtvitnWpEs9zOQEL/K ollhjsUL6OCxRkwb2lfWllPT9y77flej KGWwPB2gZ5J3CwWwMuv4tLeuvcVtlwug dZul92xqrZ4e1G4BP4VtcfbqkIybLcCRrnBGuttrsAEPgwyMhPVLFhKdODBdUsXX7Do4Pc3Ni37bkf3fV/s 3JokMWICK0xa6iZg1GeG7DyRL6uWrY3qzODRfPx6f39RwyVHb1/85G9E30/DPl8fGXlNCwQ3KXpvL0dbVaQHIIGW0 8ZFNjBaZ52E5jBgF3TAShorY5HK 2FbgK5JDV5l7SrNBSngicLNSsaU70jbH Hd/lrzp2w7IDj64pvWDRZQ mfD4/K2GEcElDQXUtnBU ORdg0UGPS 5UfRnDAiHCq4oSjQRqfEOXDibJeOLdIR8foC2z66l6azzksjlcYDm736sLCmZ1QTJX0MwXAIX/kBkZQXSwuajN7pILrDZrqKtWpU1Ys eERxPrRu5Zv3T5su7u rLipTuOvT8SkZSIijCFsbPd6i73qgBLPNOwzLCudsqu3SuRZjmxjaY1Bgcifp eSkX0yTWX3UyEQMZtIArDEQJb2OWxyrJDjlW1162UAJ6pjNnNGMDxXlyUYcYGW7t2NxQUgBfbXdSIKTN Hk  4NvQJS8M7n9kxZrn1qzb8NLB7sWPRAkRkTBdi1QbPVZriUojfMZhYYyZ1pj95VYei9RvdS1B4DiwCpY1okbhTX2X/WDMwBIQIRV18ZjdCuXUt8NrvRihaTxzpzuW45p lMdf2LkbaBWEQr2FTppnefG4IaPkwF0fHToyfMuRqx4aGJ3YWrpiAGBRSDQPtPBqsyy31Jpdg9SZhsWwK6tscokqIIRmw6LNKozERgfDFYVHb3vHAK BMrCIUtcWswMrT1GhogJrDKYzP6zZRQjEEEz7C9s9sqvAEYoXOk9k5gjDmL/ulyMTk6Pbv51IKkcPrj/iJzyUY80jRZH1F1mtbRWCkAOwlNfkgrifp9GJa6EBHAAQCJach //2jAUpUKVIPsy70xZezeEP8gVm4MBAMhjHplj8Dc7AmWXaCgz14BzaqKkBjfulq 43RbqrZVmYCGDJKOf1R u Xjfl8m0oRy ZIRlOZDFhIVZ1lsuuzshXJzZYWhBkrqpwd3SyIuzbm7GSJCkJX/o3zxqEHA8CAlY5OmVvSEX9CvH65x/oX09E0ax/5m2EATR6qKgiswWMBBWjb177nlizzij8bqgtyZFc7OYOQYMnl1bbW0pxAwEDnQGYdE8DEJ3B4vRPBUWXpQqRg8/HyXmToQwQRXhFll2yfFWJ6Sof03mrNHZ2iY7Qi7PRr/piBCq5Ljo07ccbLqzh/GJsMSBspBgErbC/AJJ07DoMwKLstBskWyL wUyHyxakpJGNKkwGVasIKwtt0O/cnkdvJ//y7DM8Mv7m3fbG zykkaCYQPASu9ZX3xgMsJICHxT9iEi9raZERFDJDlTlkVRNN1abfPUqoTABc4NZiyBUqjEisAR5akVnSGb1e7pqEGE/PUyllm ZohAKsLVDQWwVO9HGAmcZvzQ9/NEhIgSDX587hF8a0huaTQ/9UzBEhGuWCI3lGCE8PxdDwhBjskjBvO8UFsOs5pY10pMMRkzPA1RyEzMGuPmbCi ksYiJ nGpwTTPCRliJpjPyKF1S6rtd2P0RnzWZSoNtus5V5kZuTzwoJbgnVSIhLB2QErn46qOnXmAfHTEWWGToScm1rsVhecE7y6DhcR4Czzl6ctFOaDHluoDh9vAT8DsBCGK2ioYykqE/zpeXof6EoBISyyFe0xR4GtPUiQqdOFlTm3CNiDcbvN1VJSw/OqgAIBKkPRMu8g4DsarHdXIDZzWaB/HlbYBikWRG8K0SCUXf2lM4up5hLxEniu0NNMCANvpgXAeloy6 qaJoLzcm6shqS t4LjaETzFEJmw8Xc08O1Sf42m/0ZhCnT4EH/KCz4CworPfaWQpUx9u5PE6dTJz46Yt7HtGgoM1CIQYwmNVa5bne11WJqVrngtGUBzw0G01oFM zylRJ8kIQy1zUTfTJTLpqXMINF EVaG5J3e3nIVLNG4j8Ay2xag2XCLidmgvs2H1HY1MCEIqk8N92FAC/gRlFwD2ZKaHO1V/z9T siBOb0KzHXH9NGGYb/8TN37dU76aHpJdfuxg9Xe6PpcZTsgCBsJQMpAyIOFlkpi5SooIbCEhk6V7MS5ojZEhOyMJU4KowY3Q nJKaaLDVsmQtLMItgMlQWMA41Mf6Dv54rjHa6acygPsAF6Accz73f 73f z7vV9OFCV5thTsSSfLd6QBxssQyKk9UVdzZZTEPiP8HWYZ4ZsZW2ywzJHDj8fMTgZnzV5cqRUyOuJhDp2u5y4LZ02Y278ry6sWdNYYeu4hy8WEzHBeqOKsCFEy1OFmKzpHoikRYkwkDO4P26prbVcaB9SULwXujmetzyZRRW7o8ee768YKWBU0llErHncTK/ldkWmsRbbeKDIVYbM1B03ogl2WzeDqsyEIkZStoFHaht dVbWnmDK8oJsrl7bILYdaQegdPWHgsGJa f1YdgdlvM7dvLzyr VUNz1KET eJblYGMewz2zsaWLRDYHFfDyCSo8K2oAXek1rpO4T3F9NhVTIrSmdmz0   3LUocd6nbXCxxW0kn5bttaNLLSasMi72zJ4fa4pUih25YnMDftOai6JkqByVypJHBTb0GbjUOiEq1ivkz4w44ijdZcFMxFCL6M 1ynoWHXIWmTq5O //la4/6eFENpXXF2QF7BGJdVkGWTdY1lZ3VwQPztCc4/el/2VpjGO0PTSNFOpEJ6kG6mGNq4JE0QkRsM6UGWIRyeEKBS0kW15JfXMshyAlxiHpOFGFj959fdri2Mt92dejend1O0 oQh9fKkmSw/yhC5X3A hLyAS8c58mzN27YwjNPvq8EIA4RTSf1R7m93WYRUVo3Fd5qAJVIEriHwdWEaC3Z /sjwNWVmbvjR76ODk1atfftd7Y2Hh4BPPOvD42J17hbYG1njbX7ZeZKEYJXqLLLXtFNKXMusXRX E2XkiJ/O56Pdn63K2zjkUhpfT5aoSu2VXO6KJ5Tm4xnwlkoSE4OG1QiF9UTcbkCeNHy/dOvzjXHSx7vSpqUAoOt7PVEKOQfa48YT/HsOsL1kmqtNseZEhBJJXNYIFyas5Rk7X7Tvx1JGcwuEZh0K5WLH4ImcxD8rKSsS8dh6eTpC1 hREV9htt fHD/jRtIU/Pr0wEfMyrWO9U9HrvbPjZ SdmlcmRz 27WpOOVnsqB0yRJpAh3XphR mISKVTi7MbsnenFN68KsYph0jekfNnG1AFonhpiPGor2WWCVLh0y7MvJsQlexkRBJi83HIpqLr6wYr m8vDtz99WJ2HzEj4x/o4CiXUrJQoa0plYoOUrxtCItHSgo/e17Tazs1wIzvQcOnIoGQpSEenNWngU3xuLml6nSsbZsJSfqRZ71dtk4dwYDh2 SvBE/4NL8cvOpP1q Xay/8sclGVYH/crF4lSSRZBMDwtCj5GoO9jY8cwNziPvj2uV8 N KRSNan4jpSIdB du3 syKHrETNBmibc1pYvEU9kEWA1Qa6p9nC8MOZ0BzlymJL8sumT/mfkbw2cDH2aPXUMvGdPF TqTz0lad7KI6MoX3O3pBGr2ieHMhzduKnj0bGh LsLAjEy0QqnooOuwQCqyUsgg2Jbo4itZFNeKLAJJGGEp7KFuskUT2VrLxZsrsN9Rit97djwkNfsj0fmaT87NHtvc8roGUeagjRsVQVaCrnUmK11srhWqi/V0lRodulqatjEtrW5ifCjAqzuwCzPRvCiOejy TsYBr768N5KrOlsbGrwoo9894PtAEXO0qt5aJbJQC670cops B2LJd rVyKNsRunt3xx5eeZ/oWD4/3Xtxwp3HpKQykb4WHJUSOhUkUWJZIBQehjIWskRi0QnTuWs/GhtK9fGwkYdbLSIc q3GPzeLJQ/UQlI56PozpLBHR9W m1IAtzGZbR/nmHT hoZ41GEx1fddIrWTUcDDZliTjGQJSiXxwbLt1/4trclz9O9f9aWvfWuIoQg  x2fboBgmkgqx0ypVvgzKFECitAG3q2P0PPLzROTmuiQo2qkZKbuiw5xW54klRvdUZiv9WG2f3ufeAO/reu0Xc9T0Sdjd5PNzzJoUniRO6XKM2c0e9zFMUoprvJw5sdJ54bffk0vSlb55e7JcoTIZOm2VUInpuLTVkiVhTilYP6SCuqVedzrSHN 3r7UfdGSs6QQnY3lZ/85/gEUmYsiwc1qo9uMV/ta1VUv6h/Qzp0ixbE5QiIIslSUreKiQa84v5 AGxZ2YnP/pmePeJxZB1pLRwxGrEQLqixALZHUkZWVQr5 6L1 fi8oXA7BHnPueDm5znr6mQ0RrS9WjG3iitsklAVoZZsHACLEun6y6RrjstupEDV02NMi0mk8VjT 1r5SmdrJktp2aiS0NDoVBk4mDL5Lw  Wh lHN30oSkiCwij9ra2gme3vIKHhvZWjD2Zl1aZt2MyhPaQDfj4MNq72olBUV2vqrIXl5udzfctrTzX9tQDHHGw5ynqcnc4 UTST/cEeXq8gnVNXHLmhtecmhMKKBpKhM9fu6aSiFCpAc5IYOmU0QWYSuquepiwt Md6aHen9f7J99OrduRlZZkyL3uN36w6NWIyK1viTvvceesduthNx514NXdBASv2DgneuGeJ0eFII e1nT3gGFJLFNsfW1nNAn62RN1F1xRGSoHxD2SVPjGgHLhK3qEIq8NLhKDVlWjuuSEweA DUNjUb9LxUemSAqq5istW5h1JWIFg2q2hUs6x0eKS 3Yn78M27ujTHuzkNh1OyOsNkjPPZLkAsWJ5NlZOQ Lq jWVfNRbcMhfxQ/tJ6Bx7PIj7WyXLlc7ua6RSthoTOsgkDFCGrYmE/pUb8Uz85N18y kUTguS8omY YRkmxnXYXv5p9th75eGKCm8crtvCIaHHVZe 09Ceue4Ir3dncUVNH7erfPiJz3ye mSy0o1iVYlZ6JHgBRwjY1EKVOH9HhDG3rP8GKASGeRTRZbcZWtrXul6IAAriQo2FecL75sjEZFA/uAb3CHdmxC3sXJGXvnBTefKyt8pqS66WHRn7M1fxd6ifwLOX 4wW8qzN7/Q1N1wi2UpIoOVt7Yewj/tu9LXA0jE08unXvP661CJWDlLD0 niKyaauHjYvzVRA6OmBhtZtjp/EKTRKa9MSuMzgjwaFiGwrKHg3mX0356EujGu8fjQWkUnwW7u5/sBjxlHk/Q052Ax2LB1WLu7ubsZRiDcbiY9SuA3wB0P k5mXvfz02WhltUKTCd4oGsxnq4T 3643Wvz0/XU1TiZazVR0u4ixWpcvBWnPEkJzWS4twvWpRinwyfPhtgXmk8nNHqvaWSwxpMo915lx qO96r49RbwNDQEC74uPD224cuxPH2X3Do0AV9TGI0LnHon698sSHnA3Nw8FayDORoVl9PY7OflaIj2/Y/evmKlJQbxXrJ5HO1g3yKyGrNcw88AsNO6qYnSqUjdumHmMr0IfZsa5ZIUiiAUkG J3g5bYNzU0FBQWFhYW5uZna2M7ewoCC7paW0dP/ 0vjlL8C3sjdv216Ym70texn6D OanZuL72zLzd1fsHH7ibKysOEvldc3mmCZfTsUMbS45fQHE4HkzQ1ujMpAqSVVlvUnb cb00YZx/E3soLOW 8Zu3btAed5613r7q56wpitoPQo7fDfbItot4pG6gJqUdmUiYLRzkUgQUxITNmyAV1EllowMkk02RITkkmie7MoiYnBRQwJ2UgI4YVTv1f bGpifIM/rs89f6/0c797 jy/5097tj99 OZHHrUTYD209b773skv3IOJRebiAuMRvNE9Kfim2n2MsLSixwUdgs8KRxA8Hl3WdY9HMLygIciCA17BIQvIIusOnw9JPh SfHWIMAhpHh1Z29tBTY5zgR9Ggwdv/Zvp5iCa9jt7sLHd1ud/ vSRu564GRZq0tsOmUv2PPB/wEJz/LWSxx/J2wjCugXlgfZg7cfW3YV7dmLxSDEa2ZANzdr2lDO6V9MWQ02hUEuopaVl4WTudPJkS1NTCK7hXQuEQidbTuZimxC7YGQeaAo1DSw0NTWhlOEgPzIj188s6Rvd QkA5HgVQIyZgXduxx65rx2uvOeee /DAqGc0X3dlJMHqS8xP1iI3uGmw8rPr3wMzfNVzcJdMvaW3gFYBZBtRfXvw0ZSYi7OrZVZN85halJraaKKCJmL6elU/3w6nbo8nkqNfD7e3T1y6mKqOz1/tTvdXXO5O53KwDfy WAqPfL21VQ61X81lUpdPp3uTvVehu/t XSqY/R09/Ts2xdT0yNvhwgR2sxPFRUYDQW84Zrs2r6zuhWTDPdjxtO9hZi1gxQo3PoSY8NMY64ErP9Bs959quRI4TosbD2BLXxBC tJYPG7v7TV7y 1Fe/eZtxnDLIao8S7iw5Vtw46aDoTEjRHS4ukCP3dshDoR/87cH2JqGRuzMNLc4OqSqfHPKKn94KmesaWdKLOjRHi7U1LqtQyqEvC JxK4l90xyktOSEp6lhIEKkF585iY3/0wvw7CtZkl7k1WpHF0MQDt2AlO3ZFxT8KWDd6/ljvV7xl82HhDr1UUvJ wa1rsLDKGZZ40AKcHQ 9 3hr28KPwbKDh54sLq6vr393f WH9fXF9a 9ERyRaQGwdCG0JFDCF92y5v1iBB89OSJy0txYOx8YGiRE6RhTeQOWHEguCZw29zsRhd4OUeLnxgRe H1Wo/Wr3ZKiZbpli5QJeSXX19nqI8XFxXiXfZVrcvDptkuXwqUwLhi/vlKw20CFu7oBqxB2nPcMvd9kWNCT98y2Q7kVAsbD996X 7YWGnOycKAyaCg9PvPtqN/vz6Lb7MRRYuyAXNZaHY0RlzfTJAh6U0uc1vu7NVrt7yaiI5mWOe/cSYcaHxqjGapjTLBAlRRaSC7ptDy0pGmO3g5GEpvGFVbIpGhRQDFaH091WlXAl1yBrtYy54u2MqfxhmUYDrNh2eLwZ1VdJQ8 AgvI7bdiqyUYUz/88qPCbWvrXgoxpQVfh3mbCWsLqtH8vN13lpW9hNaCoWUP3P0awOEOIQmw8g87gwO iUQiEQ4vJ6KJxCuJqYpo1F/a6l4IcHY12UREqSkUoNWabokJ1HQTypHs0BnHUIYm6tAYsVLTSdka6J0mxJEc0ih5aEjzOj7ooDhvKKNY1WSKkhz93SyRM9MCNKtFJuVkMdtgNGMbG4PVjU6bu7HVH412VTmGnUYHETxgpMCo8OGy1 7Gt85qf 2QueGIMfy4ybDQuTlS9vgjBVsAC/677y/blb9lfQPJgh539JxeNdnejvZUe3udLxaLndn79R9t2fMx3mX3rsFSGe2vsLxQqv8Ii1mFJdyApcjhhuzCxLVvIRN4wZPu Jmo437n4bV uaFCJ2BqAKtVWPUNTz9mfHFuMiyjdrQ9tq9oFVbRE1/ZDq4ZKlE9VD5Y0fWZLqM6UjUNDSnN6yWa4DvbGL3gYFhlAxb9V1i0dygjr8Ki/wWWDFgD1F9ghWSpXFH2ZoPfY5mhV/QSgnaYqoo0xUupitY7YT7OW4N1GLDWPwfGW8wN2/4PWPseg0k5f4thJ8W 2a W7dqWZ1gg4BS 1xpNeUTa56trr6vz TxocsfjdRcSiYwjrrqYuAGLrDQFboZ1HbD0Dc2iO5LCKiwBsBjAIjdgMZ7kwJpmaYDl4sZDmlfxyvr41NQfDl0gNGWhZJmmOc1SzkfajKG4taUwtxUUl331MPDk BTgM5grMWV302HBdranaMctMKQUba08YjOskrAw5 ffccfhV4OjV2ReWrm 0pSsmb eXJnDOREcPV2lpVOK6MnBSt6kWTLjqOmQGRWwjApeZMX0/CoscVWzWobUG7DYwBqsclHPzDosgOUNiCvNSux8Nnp8IjU9PTs9O9c0Ozs328kzvmFnac/Du42p79ht6uFPnI8X561Pdnv4/u22R DZXFhwn3386U8KduQZD H b4J f/D /YW7sRTr3hMfZ6emfmBMakuzSrypDpHIiu4bn3L/GFOYlQzNqKuwmlSarMHSaOGDDuEGLKvS0SusP4YnNUZLbjyGLfMav65ZJl7INMVNgCV56ZqUKNRORSsGfILXo3cmzzg64wMRhZKH3e7qnn1bt XjVm5939nq/GYfRuYACzM19mw3v1Sw bDy6jFwb/zaWeG2/Y/5o8cH3aV7nt2/v/ijr2zO82dHFjkrGW8mdvJ9h8Iq2oEut3s4RlglMy7zgQ1YG48hAxIatQ6LMGIasLwGLG8yI9B4Fom6BqsmB0tc1SxtrCkOzZrjVLm/hUjC3il/9FqdqZPuXDkjcHQmIlLa0eNtb7TiZy4KsNDnzaD/xxf8b32Yb7ACrCNm84m8TYZlrLR/qaHkIPaL2VZY U1r4tpM7Kg72 q02WxB/3LKN7uoKORoraoIxzoUzpc6n83 XieXu9iVjOwiSTTetZUVQjyn0qoSqEnLijA/JFPqyphKyNBpWhHm5jWr94MOmhKSSJBXkoKsG0EtlNSt6sU5WdT706wi1MwKFn5 TuWVmhGWs8oHwv7o7zGhsyoTkWkleYBQ2viBM12wfL341ZtvfuMMDp 5FA5iPauxmGhHwZtm83ubD vW/BMlwV0wR 7et6d16pqPiH1Hgzufqg5e7pqI6PLiFZohA7UEsI61n 2K qeOeQSu3MVPhFQLPRdSOHpuheI9p2oFSZ1/XVOUlQmK0lYmHIq8OE9oYWJFIN7rizRFkrMKQ2ZXCLBB ZS5ljirDMInfPEDz6rzi5rCYfcZu3b9dba8nBVi49Hg1ZTvs5UYzSuZiGIlK5MkNjBV4Xeip juihHvZFtwzz4MqMBsfafNvKsgb9M1K 8QhkqxPQy2eUlc8wl8OYmhJn1hJOaVA16FiC47N9nJqe0XfrwazI6OHxAUnuN4LtKs0fRkhFP4SERRAlfimiLVxhWWb47wVjI5SWg6MskxJNIsitJkjFHUyQjhEVRFqblPxT1plhTT1zHRSp6Lc4x4pYowfHMVoZTnqlSW5Um87txyQ/T80dNn4iLVLFAWpVnhVN9nZ68NV5dmuyIICHuXR/dU7sY2k g9lqHLtmWzNavoI8B69NG7Pyn1t6gK4ct5cmY4OHVW4HmJp4hAK6qv7/Whi/7q0u3 b2fq4oIXlr6Ax1Plw1nAXxwWP8NEFUdQN I0VSOS6pUUWZZ1QYMZS5cFGLzQCoBZS0CcriMejqNdkFE8YNi4kISrCL6qOpi2fJ66upmZ71qr/dnBCzG9DrYy2SErPAnEfceyo10Rmed5Rd 7DN3C1OmCXTZzDzppmw1rx0Fz2Yl7737ZFj0eV0yaqrDlSuRidHnRESBKZ3ppYGA8nBgddVfvhBm9rS0cProqp4/ UzZix5cWlhYGbpaF9eDSTZHj143MyZuK4wiH8SYQnKeqd1ZXO4OJ8PjA0rWJayMyy3NS7bL7YoQWedxWVj97Pnjkia07MEBr7sEX42bDunWX2Xni4TttoyerCG/VU2nC8nTsYvT8WR9NX0mM5oYknE4/hh9QVbiD8DRWREfdq4IuNuKC7kb4DMcddFcg5Hci1NjodjdWVCDSXYE88LkR6UcOxPkb4QQrnChdEcRVkIArZLPZaox25IoaYVtJ9Rvbt7/hHo2Ojkaj0WmFV34 H 2KUDzXN01YjhPOvWD79OGibVgF31O45f AVXr4fefo8SqOIiYy1q8TCXVL2L28V6b7kolXDKmowAEx/HB e WVbPXUKwn0rDdkLQ0n46gwUhKvGCWiKAdPLgHu2isna9lvxOOK0Wo/vPAgGRqdK40EQ7omaX0yPDockSmeNP/WjAeR9h2bCh7ZuvvQi b/CZZtz4vR41ViuZWU82O9giiifr0UTizXqtirHX3nz3x16PFAcDIcR51vJhg8uxrhM5yNNAgy5zLBNY71GDgoNrOWdz0zfDNwVksLvjqP74K/bWamrt3j8EFyGXIe4/9w0Eok3Nh1hngVu/L1L68TngWt1NT2N 9 smxzNQuCUebb79mF3wQNDsdUlnNJdmqsl/AM4TnHgeXg8l6dEIX2qjT6Z4SnNYIT4Vhe1 qi/q8FpFIURQhD67IhSIQgkyxTEJo2DqRRDEOsVtFOKCQgDi8IoUWNKBSN0SEqIPFMQLSIhKjHgm0 okpWK XSrBCLlRGtoiArqpeg9RUNH1DEOsJLtYlazoQLikIqa34TKx56MBdvE2EZ83SKig6WlLphRZDY5umASI/1aiw/3UwkYSL7xvJzEo8Ov91uMpnsLhNbbocgRFHxREUtoawWl9Vk4k0meCjG7kI lkVWyuqyIwRBEnrDdjuLA3 Q8nJcBRAoCzIjDqV5F4c4yeTiLCbpWGOb4OJFl8nlkozMxgXLWVyDNVi53zin8fLEpJSDZe b7ePYvmF/64MNtp4HNteetWXHlkefeb/BP/xti0fhp2s8lD7Wq3JkbA76MRGeikK3FIW1mlgIx HfzvkoinEs52BBGFZkGJGyMIwVsHICRrmcKACxWu0ulxFn5xBCPJibLBbKYgUE4AIRNFJ4l8TaN2C5WJeh6FYGAuVirS4rbwWrRvcUWludp36WSO3ntRwXOdUs8p1HB91O7LD/6OaaaHbgR75 /dgcPnPuuoelhnrjjGOwX4ehN4Qn7tq5vW3Z8AGaBSwr72JEkbICC4SGZoUBiwYrl4thLJSGx4qxuExrUg6yDMMbsHKAeSgVSDI5QVYoosVitZpAhOWNlwhVEll2HVY58nOSnSe5h9ZiYaBXHH0gHDx/4egVC993uUPlAEsSaz9/TlT6xi8tRP3OO/M21ayMwZqi4o jbZeExWSAtw6dqrI4ens1Rb a1P/k7dxD4yjiOP6PddXq6I46O7qrjuN5u13c3chavXCLj5j0LsZXG MrJVa5BPGijTaSU6O5O7QKVUhOCYgi5yPR0qDVkNcfQgsBQUUxf4Se0D80PlAQtX/7 s4ml/qKFDT 7tXMzYbdT3/PmZ1M6Pd9nmzsfeSmOZv5DEwMXKKucknPA6ykgkW4 oLaRA8jCpF8BZZF057vuwTGSX3OqVAGJ6kS20dnnWguR2fXyfrMpkwSErjGUVi2RnWv2YBZGjo1XMswpAi6burubbz6tYJPO6aGIpqLYcHL08rL2yff2bnlg2c3nrlxvWBh4OyS8y/c1nrT9oRe zwS/guZhBX8/LNP/W8/16nzwhBNzBxQybIvmcvSr6oZ1XbMjLZ3EKZg2QbUjQRjcRve morrDivvIom1dj3aodh2NyVQlam4xb065vTAQs6R7pUv754IpYQc9VnUX s7x40onv7CzSVIramdx1uOHDIC95s87xKtRDRuZE5IeeqeRol3pwLK3t37n/r2pNPwHKMdYJ18SVPnr3/8PYE5X4RelGZs2UwlydCdlR8GhSLgV9s/H7f  M69Q1/8Mu3 2JY7VO5VVjSsdOz7/ehEVyG2zn8lVIsfWmqry9m8OZUm 8K1zUdmV98E93U1PTUEtQFBmp65W/a8TO4vLTgEb4Ky/ZH31fT1/gFb48Gpil82Fpr70zARJEmqDGH03UqVNg0jxPVK9Lwew523nvBRRs3blwvzbroyTv2H8ZwkUT4EgHOSDqOz3whREB8R1LPp mJ9zpfq2Spa6SPdKHic2yans0RGcMiru2wYPZQFhE/CJMvtctl587CWmkymTAC3R8vtbmm5G7K0fKlDhpFoZeYrBYC7iLKuaS82OMnEkaPdzNgWak6LIuOHkIqkmj2ixPDCRcesOnN7vcm0pGfQnlhmSkpKPwg4oLlOo5rS6mJpoP7Wi674uQN6wEL47Eb7sbGi99N/Do/3waJ3/DPRvXW9kXb/BdtjfPzjb8ebu1 uaPZ13uODOqwHWYFmRzRk8sO3rLdYLEMH8YohozbrVizOKO14WIYmIzaHaU2IgXTLKFgKedueE3Vgq6pYRiTl2cDUwjNMZoXQiK0Oizpf18mCLCB700MN3NpofxqeOpTTDJhd6N0NptWklQTTgm89yRRxA/e/Ol3DZt3XX8xsq0z/3tYJ9927 b Hf2dm7c0oOzCC7Kzs3Mfnvi4vAFN 9C / xHOt 8OuFVjqR1FdFIlMnpXnJ0JzSLm9yKpso8paKe3tcuNAh40cKwwahpCNJRyuvMwreMAJbFCeMcsBhgQeF0wFI5ljDIgmMIvuqzkotlxAT8bBRGPCmKT 1v2NL70PeosP8oD9XfDnR2dm9p2bRp29ZzzsFOY/8xrA0bH3/u0ns3b9uMahYSl2s7IYpTp2ppUD9jPhXl2c6Xuzw9gGYhMeUkeRQWfBELSmVmwvr4UViuXhsmXDcNKWNYmss0xvPVDs00wDeGJRQskptNAJZmGTpgWcaqGYbDOUNYHOnY0kjIrNrOR7r33/5Ia7cSnN1yqYjp3s4HLu/GAzV5/ lqL2pMt1yBZZD/tWZt3HD9rQ ee 59D77RurdrTWl8771PBrsqRaSmySODoTSRkCdHV2FJjUsomkwpWM1HYZFCqWgQk9kUZhjaKk9gHJqVMg3GSR2WxfXcaGQKmLYfLmRJyj1qhpkcd2z0JYWRkKf8pb17D/7S/dAP09PTe3cvy6FDy597p1XjwYf7b3/m0Queeeb 2845bsNJ/7UZYm3qDfirXtd90DrTjNJZI/C atAOpRqlsAiBqkbffqB3u42skFokeaSLUjipML0Ki6o8MsrMU FwTtMvtVurZlhqIsTUuQ7NCu0UslVp50vjgiMlCQGLWAqWFuUWeyxhctOzP3N B8vJjuaIYxuc6IWRwLZMD027d 5pwtRQEASRkw2ySoJ0EAZJPfS9qz9u3RbfjHQCjGZdktIb8H9w3UDrjKeHjLBEejD2mpDBSDpCY9Le3tu7XUrESgVrPB3YTjY7mMl5dZ laU42U8ZpO0528KV7rLoZFqqTuKR0dnC8lHeECVhCtJXGs06E3z5ZrXEp4OC1bO6nwSgrouzNPZ85espYheXM5mg6Cp1sDzTL5iYhks5cvqdIdNQKYRD0RNlsFEQ96UhSx0QBlphu/eiMdZ1kvfKk408ErB8JYbjC8MMjdfkm72ehBVwAVh6FhpZK8eSR2dlMLF/VYRko miQKWUy6pvZqa/rmiWWvprNzCoZncpT6aLclqxtaiQTy hXS4YpFayg9hWOQ8/vM59lvaOwpMxU0aqeVWiWaRqE6DPde4pwA64r574dzaxI3rcFMl7iTW 68c4b1rOQPvGUDTe8PrDpR2Joquofqk6q0aNkz/j3bZyauEInf BAXtg6al3Ny5Xny7lcGa mumbZ0qU0n0Nr/OxgK3W0KNbK6Khe87gakwvmuj3zqk/cXEGlrGDRojoWj19zjcKXpA7L1D5Z7okD8tQ2Uq4hdaVZGmAZtPDNx08//cILuM1wquDDX6ipsxdar7oByw9Xli uAyzcw33GdQObZtQAALfo0yNJlMN4wNH4EpEOmnXgwHZhE8DihAiho44WvsW85TyLOjaKFu5TJxsiLbXJimalhPQDShmxKWo SU3mwEXRiKap7ThOkOxxTUv5LGGkg8DRdDdNiqZh6ZZhObsbAMulUGsB43UZ50RLcX0ZFs6Ck0Thp47IQUFPJ0sF3ZIuHKC u/WqM pL78BqPWBht yBlhndIIa09VdHAq4hXjMV74nkJmMKFtO59kfhcSEda5YpLR8 Nx3B2wa0PuggKY0cB24FrtjVpKvBb1mBk00jFATwWz1GDMuQbpqmHRE6SC7VMJnGLWdoC2CZ2h/EJB4hM53wWQa3GWJtRQhpWRKhwrMMGKlGd2 56tTVDQjWGxYT g/DaabGoGzAsrnUTBUNHxpfGxZ8lmmH92Tq8mH92vjct3EDfM63cwClQUtk1xOrHfOGJhWscA59YjeWGY2go8cESyOFalEy12JUwdIMpXvh7ob/EZYmyNhIhPxHcrIKi/0zLKJJSZOZl3IQ Je32 sdyNLUoXLsoA4t5iNqaohX9idTT6MJMrFYI3Ge5Sa/mEIfdXDhyzSTxrHAYhywKpwjwrIYFtEAS9/b8j/C4pKNjQT4QOhRZqhgsVizrDVh6ULYYXNmd4LqiOnNffcchVWdTEeE2AGGMnUGWMjZ2hY/aUbcDxMqKY3zLKO5tpgIKCOkOfFZMyfmMcGSpDDVQS10sZuqNc8iloI1/X/CQskxpBw8ZXEmSdRg jIsRtaGZTE98VNjKKXB7LCvrlkctWGCCZgxMnholmXhegwkpQ5jcMtxIR3DyiKDp0K6nHifJQ15DLBUyscAyxEI0PBZS74ELF0Lp2GGG/4XWBywpPFhdbwjlsZSnpkKVmyGcm0zNF2pCmmaMtFdX4WlOYAls8KhCpZtofjjNmB1qBHT35c79heztlSjDnrzQpoL7VhgwWcBFqbLKQ0RDX0VQ8n/DAtOYOibUrWkpLqYlyq1Wo6GkqwJC5aqRaUyiWd eHsdlsmXhn1T5T9krpTnKcQBThUsK86T6qMO4PbFLHEtNVHhLTSbqWPTLE5qXw6PxI/hr2qe9Jm2HrCO/xtY133QMuMRlb74XfNt bZYPmmyNYmwGNeGyL00pPB/Z4YM4TuYLTPDZcLyjmqWKqS54 LyAQudkHU7MSyI4StYPM6zSG7UAyxXuOFCaAo0sL HpTcTT8HS4QeRBx4cGhobG9s9Nnaww7N1mxPWPP37aKionbDh38FS0x8Xb9269Zrrr7/ rq3XXPPsNVuvueuqhoOTTWtJY2/vJ01NARUW2Lnun2FxnnKzs Vm6oqsn8BI6UoG7wMWyaaABqMOdgr5O1mG5TjSopPVXKQpXUzx8mKaoLhz3OAxn7gphIG/h5XNJq4 uG/PZH3p3dXLkkwvi5f49OPWXafijygqwQ38F51x/kXn3/LvYOGW 63v3rjrxl3btu26SsmNN161Y8tDe qrJ38v8erKw/s3H96z5 ehBMf03l/NEIm4CVg9HomSYaLvHr5ybcZSteKlaRDqHdU25jocsBgKaS MqK6GlR3DVLAIYGHwmER6zwJgWWvB8r/AEM0rrb1PrSF9Tz11uP/2Cy54tC7PPPPMo/ed8O/MELDOP/fes7FtFwSb3rRg84gd5/X397f8VXATC 4y2rwJq3QfeLFIXBeK8ldYmpadrY5ARkdGplbNUF/6aiT2KSPVqbyPkgiwZH4KHZXA01AOWFqK5NAPHXHwgqcba8Ey527q7O5uOW3HJnXPDk6s9U yb18r9iPbseNsdXvnaVhNik01Bm7Z8O9gxbtD3LZtx2k3Dqys9MbH2jIwMPBGS/ W917s8gxXTcf8HSynrVBbqhUKtVqho96BVSaWlgqFiYlCIVfh6kD45Uq5trRUq9XwRcV2Y1hGpYBD0RFP7x80q mH9xqwwPr2N9aQbUp24fVG/LnrrNNxg/r5J//baHjSiSeccfellw5cdydWqZ1yUv0PAf9RroSojaFfv b527s7X5soStiXxYy/wEIMNblNdV1HTc3sOk3TZJQwqoeEcMZRV3OmwclHNjoyhrwUPbmqIX j7dx9mwbiOL7kyl3OiZ2A8yohSaEKgRBioC3hoQISkcKzVEUt5ZEIIahEylLRqkgwobbKwsAUoS6doGWI1IGFoZVAGRgQGxLqxh/AwA7fn MG4jQsuJ/k7PPd ZR85ced/bv77YAlN24uaOYFT6Hj3lGs5P23SzUt/GnxLriCsMm3BlcAMsA3Sn3cNz45doa5/lssnXEO96F7jQTnmHPXvHPYPb5gLj/ydBzd8/5FbWR91U/mCLvjuOfZxcJb5W6AW2EcNI88lA5ggefuKEA7496H9kMAneBAAEUDoeZr/h4vyqDPjgCFOl7gD2TOrW/UsmfnBxNHgMdCt2AY5kBuQQjJjZnx2AQGtv6fWAK6QAg9XYGvVaYo5OG4C2l2sci9VzT68uNUofzj j4/zjYyj8HftovV CPdeBpm5TU1CMH8Y7cPD3R2QCuchFh2owYqTEurnlAQJkfJuD8e3787GQoGO4kFyXv8d15t1IoDe5QjHqjVStPLFgl2EC6MbhucOSLWEXf68nIksphOH2MYvYekdrMtIQbnz/bVF27t69kRyJBtBtm8NH 7D2LdvOhHx5esHRqSkaGHBbbIbsY0/0AkFOymLIiFLVSEXPr/2IHqRRFqtB5ADxFieZNz dlDaFi0ANMQssW683kt 7pyLa1ynTNCWFiCCcaxUdW0ZUNN8C5nWvASLpH6hvcYZBpA2N9UHzthPBrI1598z CiE2zHC3O1kWzO1xN0mOPJUGguPOvrlJ95uFDPD008SEgpWctk8Y2VlPxqdTwyMGrmOSSWTFwbwvBsJdHFtxLr0tjTQm3p7bmjfj/Mo0DAotlRxhiSwgeYCDoMNWNh XfY26HmHv/q16V6fnpMgVjkQ9LCirl1ZXRxuH9oULgcFOugHB2borsrSzCXaBPr VSq/GZ1X9zvA94/kHCE13f45MhK7mjA5zDHfb7kXHbkpDfj3YoMuuaH7syVY8PziQQsPO3XD7dqTAxHpsY4d1IsKS9FHw nnl2gGQjcbWLdKPVtvMvl7l28tSUXc7kcBrOu5xznO8LP/OyXW/8g92shjKGG3JwosNUZiUd9PFmcNP3LOCcWQ tAVSdi/dOXhcqEblMLYqFJn4IJRHlL6llYup PpQpZp1lJ5VcKpXC5E2tr5XKtAJuG0wbzgFbfXAqmLoxNznPptK0DZioyqv2Yi1dlbU822CI6Q9R7iIVTWozY2SCmAepRlMJAc55IqUSVpyi 8y9iFuFwSYtgoCHEEnT/axXLwIU4UjmmcOakWOSPQrKocru/WB2M6txtF u8ttxrUQW9m1B8O7ndW0WwYfsR4Kx22mg5B01nRpixI4JGwy6VM91BsTzCxRJwVmhArcpBVbrbTkNt0Y0XsLvOqDpGIpKzDV1HAG4dm4yjXcjYGUGuR/FVhYrQQAUeD216NleU7UE5xGgH0SzZyBe0pkKmXyLGrgpd6G7h1rE20c2jSEd9uxjVKmYiNrGQqavp5UhxZtBQVXTftuFJKR tFMd7FcnsR5am3RB6FwN0seQSgaISX3wUBWtJ6UhTpJVqVmgm0Ae7ASRTREqJxWY1lIeyCqcNF4JZG0H1MORRIURd0sW4tQfSENHpKGJiIHVaoXOwKReHTxKlooWHXm6TTSmQ/PJ0cXKiTawbv7k7f9engSiAL0ZO3xMd/A5 oYqIg8RF8cckxVUwqEtaoSh28QYDGXQzU0AyZciFxC7ZhZA/IG2GhkBACIEWsrV/QMZSpE6 S6uo6KYghubXu Yu/fDeu8uFvnd8bniaYHW3vydGO2D0QQlrv tgKEDE8ACLBIgdU5SM5QLd4f4UvgLpGoSOB9tzYdgVyCtl8CJ5dLhQoj2Ah9/CIis5  7SpfsDHYH9JVgUnefB2 MnBvs5UtudYwnrcIeMdauCtEUEuTBAyW9fJs8Q5e8/qMihXDlBJA8qiJ1MSvfgZSuwR4qdHPdVk0TCkkWACkpWINsmIdLh72AB4Ount18Ne4Bw4q/Bun6DIqImvZ9hHZPPkrDsGRduikOXu5U1xSl3tdR3bZdW7hqAJnc9tKk0MSUAxlLOTRxyXgjXUFjiV4bLKw31qb x jCiQhgInnZkPS4KIhcJbo8Fd2fWqG/57qwg3bK4GAJLNr5VaAw8k5jagif6zZPfYJ35EdaYsu1fvSzh/x1Y9FgDt17cPX5kKz/KT1w83msWDOblrClFutolZuPo1eeFnbRisAkDW3x2NBy1jTde VESByB9jTqKl5Y6XOQFX Y2JnFjfNo2tl3XUytfeKPdUqBRrzpYqheEMQJm4cIelbGZ5IGXhaaZzcdYLedDReRJOikLBqKMAIx5S7hP72Edf1RvHv0Ay5hRxgjWQ0X5O7CkITz4eOnJsMeUX8NiyOOBvZvogcPA4Kis/X5dqNgPLQSnXKi4iDCvEVQeqJ0f0rN4AGBtAOfLRV8NCojKBJtyDGC2Avy2LHDawN5mjdVnU9UnSxdw4qCWuliEntrPV31wArCXKeBgVwB9o0GV8djGowOsa48eHP0Iqzd4QlMDjKz4rzl4pCQRo vsd7Auox/badlgsLOTDJGtm2wGABjOVJhMt4IF0TB0dcR IetQkGWxBpgIxMZfc/AjjGKz7 Qqor6ag U7uW26rIOFep0vcOq3M1QnuyhLEKIQEUVogtOgKBkgFgMcBdmOKvV/hHXm6Mfe8Ex0fO7 C2DwN2ApFPKQUeKKNw Vo1 Z4RmpWeCv/Uk9YEHbrCYAbF1uTWAIoUVY2KdlFERWaCKmZjHoenecO4Bg gjuICiLTcQI1iCeAEnnDlaWtfyUiL1mAQv40lt4rYU4abO1xWAcIsNRKNDxIYgBEQGBT5O2AKlZIGGdlrDuezdPn/4OFjs6unyF5p0fMMpE/GdhnTwh0433eq9f3ZlqMmL L2GdOIXgl4WBjAUOGj4iroNdrEnNslSsSVd2dZSGAqEqV8MuCRo4VM6ST6C4tpav5gUQLN3JEVXM58AttVlmDXYmixDY2ybDtYVq7YBr6kiwgFXhFFcb3Hz2QLLyJllWfgLg0sD1sz0aHt89d//B6R fDGmw3KcQy29uqArR qOwqDoaQD  / r gx6jKcbfwLoM0lEAw8ABUKcGtv6wrD2mSp VIxuvtxHs5gjgBNK0GEC HgH6PkJjQFEuE5Q 61M5VtWoFNBUoM23AXYOUzVqqD PYC06n4XqgszQBnUe6 gEWHzeKIh 6nIGfhmh1Cyv0fC3sODx/QtPR5cv/3FYNLuMD /eeUX55o I1e9g2Yt22mcwpE7RdMtotJ3byef5yA0b2yJnD9ZygEXsG2kstUUO30Vbp9Uk7Vux72G1Sz13GdiDST0q6kyL8vkQjNWmM0PUNsvRaIXT7cQ2Vm1i q3nh5ukyccYtbRZLDfJ5lMVN5pebefjrJ0li5X a1gU/ I0o9zSF169vPWHYSkE6 bZK9eO319nMrzRr2FRtnJbcKsPbMi5EJxrJuf2iYonFe0tLnQFLQRmCLGpyJq77lUtgswfY7 SIzBWDOhA2EyrfJ7okHI ZjCO9o9GnuBTMLCiig1qwOVCEz6fmX2qhPMUdbfOXN0ksZ5wHgkuhF d/2qGp36ERe/smULRCymR3ilKE/sHYQGDs2eHz64llCZT6tWvYMk/dfxzi4RAUY3vXvoZ1gHZ9Q/n5PzvkfIHJ//oRdt17cnzew/OK2f/J1hfuDufF6eBKI5fnDLd98TA6qEFLcviocSL4vYgSPXgRbCKl2hBVsxlezCw Osg5lSQCNLDbkkMLL0LxT g3RxSFgqCFFrw1v4Be1xK2T35nbT qqketurqd7dtMpO0k0/fzCRvJn0Cv9BW1J6dH18gzq3NWrpxOXf7wZIK0PL/wFo4JeWDYkp7tTRPWFJcfJFefXla4Pzkn4WFKpGYgiWEvIh49Lm1JSGQOQ9YicRF3O6rveALYkbA3Sda m4SreSR03ewEtB0PslLyzn8rDCTwPnWHGAhEvmd2 lnN07TQiwrhCnJ/qOwRHIJt4ykF29d15NzgQULPb dXkVoN14AuThtZf4BWIkYnTp GgHfHqbvv4V/eh7D93BQn82l7904uQSfUIyO/zuwxDQsnGzJ5Lk3q6vptZPJQ7dZC6eIT5zJ5W5h tWVZJxAc1Y1jNzIgonxIB67Q4mZ1Jou5cSfjHRdpbBaIxE52lWeSkK61AUz1vgYMnksSWMvtXq/aDdBAk9Ms2DhpDQKUBMTQUpFwlnPrd4unBSnDwsrQfr12yvai7WttbU1M15by7GWJaRUFNSxyogWK1wKivo3IgL4w3K0xXhTEthPSNBElnoQQ2PKksdJeSYlwSBEES7WVaacCQtnnviyoZhZeJh6e/5qavHW fOHhZVYoBPPtGuPU9nFDAY0Y6VpK1o8rMkRcnTcQq0IQGKhoFAEDU 6jiMFAx673qPr68leeAAD/iOoOhtjrzs2l7AixU1RFUxYVyRnW9bi1VvjCcRxenQV4c0Xn51LHhZWguAke37t8eMURpwXY6RB2XhYwur7XX/EedcPWhVdBk7HYip0nK7Fcifsu27LZdoJu13f5c1Wyw36H4QyLSo5YbMQOEGZ73U6Xb9JVG0Ffsildj/wbXYd/17od52Pfgjiox1QQ1JN8ixYaow6i3HrVJy0Ymrx2uNM7s3hYGFgUsjG hctT lz tMcYJ36HpZk2mhXdKo40vd1soYfWA6qUoUu8UyFsrpLtNMis24zlfpEvsNyb5NkRLm9J6k2 ECN9iZyd /dq29Ka0gCdKteRey71C6bnijUmayDlmq/vBKeZsIqvsV99uuv16cKPta7ZtNuvjP5cNUQfV00CHgCSv5E49GdaVhcaSsHst/wTGJ226QPbAG7MSNYsjrgfJN1t68D62hDApZpSR4PYzlVZnOwzZ39DeK8E6wPwzwjDSbY8D7qfZctaXqSLSFHXa8MwJ5NQs6CdR9tFsoZ20WdUHHJEKcOxA9XDQGLjolISUhMa9Ihnsncn4IFkeyGpLPgUg8vvH1wl3e3SUpRmFjWsBq6eXa6k/YrbO/t2wxYEDutanXUs419X0duxym0vF63pmAVOj2LnZI0AEuQJPbzPRgsYAmaaVna5RsXVXGnCh5JKFrnlkBaHrY3FKpXTk6UmJJAGooDy0pv/VANVcWKerrSkPBqeybDsqSQPIHVs13XACxiLJR0v253bCaGLQOWb9ulnp3f9yUzYPFGszscNtivB3sWCQctIMGyDOKGv91ysA9gzbYshDZT8Q7F14J/I1XvTwKWEPMdZJ3S1OjO1LgZjw7KOlMZ1VCS/HiQlwNb6tZOzauxtO5UByTu3rFCJ0 0B3956FD5jlkmARXqJWJz1zZ85Mq84zfXVeNUgmWR6gydTSLAAkcZVOyK12BCNeSNGkkZByuHKUcqONAvInP NVhE3DjoGGx1ZavDcmM30BkNPPuVmmcaBccs9ZjyfnO794Ejf7lyq98JTRZQuY4GHrC4ObCZ7d67itMgGnwALNaByBkxi9pBg7jWYl32W4C1KY0O geKbbMAS/wRWLOj 8 GBZEhKz2nG9aMcisc1QMDllYPugM78BzXGTT6Xui2Bndpsx6MWm6 0h76wX6/rGbCcHW429wIDuo1qvRHo/4m287 njuSlWFvmxhWOmySGXqt2t36sGI06l7w8aDeDQcNySTiYV1JIpjy7CCvc4N1fGGGfloNJRvwxltEJMnayUtmxjITR5KCJQudWVdVkmS0GWMnZVky2moyg SupZMyJ5N1grBXlEukUoWhEtmQkiZvK4/NhoXHWNOskDTvajjbslbSW1cmccEScRK/Ud9/0AIm0H0tCFbUfTLoDc LX8QQ/nOwtNzWlZNfCy/ pL79MpLHIrtJfikI1k6cu/nsSMHKZu6d Zu6M1G08GP2  zlG0cHViatqSvqL7OUPwsTmJH2 3V/olXEr77/zSdmcjlE3M9mc4C1cOxIwFIz/yDASo2lypdZSeFSXitqRRQ69ZsVkdI0fDXa4gou7jMoiYb0LKK6KaWbBh07IrDKr5dfL38r3HK8fHllpZgqvl3G4h8RivBiuVhcyeIO3m Lo8qG2w6PDKxP7J09iBNBFMebTJjZ3TCBmy0MTMJyWITdJmF3gwuSWCgYNp8I6smx5ixuC2NhTA6FqyIoQc/C6goRRFFPQbAR/ECvUEgRDg4EQVNYHETwo7FW3yR e3cqfsXT/24CSSAfP968ee9N3iymAfL5ig9LtHaDZTVKJmMk8IuVATFDy6fGrFi87BuUDj5S6mfPlCBZwfBw9e/xm2ChAP50ClcliVJarx2wImWfQez8i4VAGJ8 sW7dgdjGCQUF334i1JgIQpIkgjjRofXnYa3s LOpCIyKjflBNAnm9i7IXSaPkrhhcIPR8zMON7hm6JwrrouZKbvcwKv8TCCjygjRUiNmhWO1cUXE41/V0MFCyPSrccuzR9OagtQAXjl9AmPkRs5hCZ7U5KRS4dyZmcymm4qpOU0lsRqsYL SoayHHRUsb65EiQjcv6qhgxXQNFZqVD2rWvYTioxWzmAJ9KTzidRezLje7navdtJu9OClFy9uN510e /DymqwABWu1IswIVsX9lAEsL5FQwcLaVgjxqmabY1ZxTp4khVxia4eVu/O65qzdPH zKP5nnZoaXLy7CvTPLw4X18VFtLQjhREKpHIXFbVMf62MThssAbDi FcC66A7YWLO7EG IKC4hewGMAyF cd1Vnobt8 OX/p6asXmn5pwXHc3rGeueK8QgxG8o1IDGAV6wUzCAp8q4YQFrgUVpqGAN OFP0cYwZbxkoYC5GC1jnnyM7Rl033/rXujKPr955tdRy9B2a2rGHJGNMEnWh4EA971fE0Yfj7UA0hLPH3ePBH0CNpWbX1WaAVRF9YCQ6RitK qLFK 3W3s21DV08mS2fuNCum0pu/jpaDJYo8RrRhx6Av1J4 ybmkfieqIYSlQtiQxCyaGoO12hFvLopR8MsGqlCh4l65yCvcfdjpXH wOOlcP9NuupUE7i3cxoFlhKCwPGV7MbhcYOOwxHkoKSUD36Ohg/VBsrzjpg0L21asOFsSC5KACEmEivALBUPE1LTH8xBZKaP3J9sXdzSfd0/qM08UrlxfeOi8d/CEEhKgVE1ymh3fBBngSMxLRWFk/5CGDhZSZJQ/XrVikOV6G4 UCOWyrKoYD0JSktGa3cuP7jm3L 9vv2rrDxeu7t119FAlV1p6vXRPGGMQpAYkzGWKaM6fikDmCevhjR2M4TUHC8uKlknPbrI94b68qdmTnHKuqgKCJBGGb3QWp6O6c3tp6b7jnmx3Fjudnq7duNK5ckqVBoIxjRFN75weC0MpY2RduZVnCkZorcHC/R7UIMpEp6sxUTWxI7da9QShg/WCTEHTmk3ZTSZ1KKtrui7rTUXe7nJXdl059FaQBOSPpDx7nWjsH0udSlBKkYbWnGUJ9cMgxnJ SphXXOwwsHHULxmEskIGXhUWgoShVComQwypiDEWVJmhqiqhVM37o7VIGKpjES9yS1zFl7x70x/XUMJCAWwQnvYbHhQIR8LiqE21/AlOCpSKPctMw2QYY0oQUmUIKdQk5UZiwh9PlW2xfcQI3N1an dYDfY75NY0LIQ55pRSHG0VwzFgBT8 ErdPbJoanT29L5/m/S2bVLgRhnKHdx650bpZtmBaADuE4WeVj/tZhWGqhqQ1DWsQ0GNJFu5L5UmS3jk6VQ6PeBErcmL3ZqgO20LVC0LVcnXrpS22uBApvLTuAByby3OzeUYIooZBiSolpcDP09DBWkZIye 5m6pB4RxOK25ZwvsfADRwxOMWKA6Zn eVUy2/hAK/UH8DLOGfCiwXPbV dG5jrWrbME Gw3ACN8j6qsXU8XE/mjULzCD/YWFx9oUzLMNy6Wx R7QOiuazOZMxUV/PYIUYWPvnYYGEB5MRiIjch6AP288weARPYRGlw/Gvw3onBCdE8kgSt492fQypcD Y8n6x/iJYfUkr6Lew ttgvWnXTnEABIAgCILh/0 GEDAkiBZcocqua7uzO47Obmn1lVjT5vy vISu9pVYLyGWWCuxArECsQKxArECsQKxArECsQKxArGCd8Uaf2YAAAAAAAAAAADgATPJQLrcXis54wAAAABJRU5ErkJggg==",
+    intro: "珠海市人民医院（暨南大学附属珠海医院/澳门科技大学医学院第一附属医院），创建于20世纪50年代，是集医疗、教学、科研、预防保健为一体的综合性三级甲等医院 [7]。\r\n1995年，珠海市人民医院被评定为三甲医院，2017年通过三甲复审，为珠海唯一省级区域医疗中心、珠海首个广东省高水平医院、全省公立医院改革与高质量发展示范单位。亦是同济大学教学医院、国家脑卒中筛查与防治示范基地医院、国家高级卒中中心、国家级胸痛中心、广东省放射介入医学质控中心挂靠单位、广东省转化医学创新平台单位（肿瘤微创诊疗）、澳门大学——珠海市人民医院精准医学研究中心、中央干部保健基地医院。2018年，成为全国首个同时通过“五星医院”认证和智慧医院HIC六级认证的医院。2019年，创建珠海首个5G智慧医院，并落地全国首个5G智慧医院海岛基地。“2019年全国三级公立医院绩效考核”评定等级A+，全国第116名，是珠海市唯一一家进入全国前10%的综合医院",
+    route: "人民医院站：8、9、12、13、14、20路\r\n\r\n湾仔沙站：2、3a、3、6、7、8、12、13、14、026、26、56、69、204、206、605、K3路\r\n\r\n百货公司站：2、3a、3、6、7、8、12、14、26、56、69、99、204、206、605、K3路",
+    status: NumberInt("0"),
+    bookingRule: {
+        cycle: NumberInt("10"),
+        releaseTime: "08:30",
+        stopTime: "11:30",
+        quitDay: NumberInt("-1"),
+        quitTime: "15:30",
+        rule: [
+            "门诊楼一层大厅挂号窗口取号",
+            "预约号取号地点：门诊楼各楼层挂号/收费窗口取号"
+        ]
+    },
+    createTime: ISODate("2024-03-08T19:17:05.834Z"),
+    updateTime: ISODate("2024-03-08T19:17:05.834Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Hospital"
+} ]);
+
+// ----------------------------
+// Collection structure for Schedule
+// ----------------------------
+db.getCollection("Schedule").drop();
+db.createCollection("Schedule");
+db.getCollection("Schedule").createIndex({
+    hoscode: NumberInt("1")
+}, {
+    name: "hoscode"
+});
+db.getCollection("Schedule").createIndex({
+    depcode: NumberInt("1")
+}, {
+    name: "depcode"
+});
+db.getCollection("Schedule").createIndex({
+    hosScheduleId: NumberInt("1")
+}, {
+    name: "hosScheduleId"
+});
+
+// ----------------------------
+// Documents of Schedule
+// ----------------------------
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef05bab11040c2c9bbb2e"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-12T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "1",
+    createTime: ISODate("2024-03-11T11:51:55.011Z"),
+    updateTime: ISODate("2024-03-11T11:55:20.754Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef05fab11040c2c9bbb2f"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-21T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "2",
+    createTime: ISODate("2024-03-11T11:51:59.265Z"),
+    updateTime: ISODate("2024-03-11T11:55:20.791Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef062ab11040c2c9bbb30"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-21T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "3",
+    createTime: ISODate("2024-03-11T11:52:02.089Z"),
+    updateTime: ISODate("2024-03-11T11:55:20.829Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06bab11040c2c9bbb31"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-13T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "4",
+    createTime: ISODate("2024-03-11T11:52:11.394Z"),
+    updateTime: ISODate("2024-03-11T11:55:20.852Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb32"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-22T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "5",
+    createTime: ISODate("2024-03-11T11:52:14.038Z"),
+    updateTime: ISODate("2024-03-11T11:55:20.87Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb33"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-22T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "6",
+    createTime: ISODate("2024-03-11T11:52:14.071Z"),
+    updateTime: ISODate("2024-03-11T11:55:20.901Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb34"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-14T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "7",
+    createTime: ISODate("2024-03-11T11:52:14.099Z"),
+    updateTime: ISODate("2024-03-11T11:55:20.923Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb35"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-23T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "8",
+    createTime: ISODate("2024-03-11T11:52:14.125Z"),
+    updateTime: ISODate("2024-03-11T11:55:20.944Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb36"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-23T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "9",
+    createTime: ISODate("2024-03-11T11:52:14.151Z"),
+    updateTime: ISODate("2024-03-11T11:55:20.965Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb37"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-15T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "10",
+    createTime: ISODate("2024-03-11T11:52:14.182Z"),
+    updateTime: ISODate("2024-03-11T11:55:20.989Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb38"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-24T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "11",
+    createTime: ISODate("2024-03-11T11:52:14.208Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.006Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb39"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-24T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "12",
+    createTime: ISODate("2024-03-11T11:52:14.245Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.029Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb3a"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-16T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "13",
+    createTime: ISODate("2024-03-11T11:52:14.275Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.049Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb3b"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-25T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "14",
+    createTime: ISODate("2024-03-11T11:52:14.301Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.068Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb3c"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-25T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "15",
+    createTime: ISODate("2024-03-11T11:52:14.328Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.092Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb3d"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-17T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "16",
+    createTime: ISODate("2024-03-11T11:52:14.359Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.119Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb3e"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-26T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "17",
+    createTime: ISODate("2024-03-11T11:52:14.386Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.139Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb3f"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-26T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "18",
+    createTime: ISODate("2024-03-11T11:52:14.407Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.163Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb40"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-18T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "19",
+    createTime: ISODate("2024-03-11T11:52:14.431Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.189Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb41"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-27T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "20",
+    createTime: ISODate("2024-03-11T11:52:14.451Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.206Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb42"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-27T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "21",
+    createTime: ISODate("2024-03-11T11:52:14.475Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.227Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb43"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-19T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "22",
+    createTime: ISODate("2024-03-11T11:52:14.497Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.257Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb44"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-28T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "23",
+    createTime: ISODate("2024-03-11T11:52:14.519Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.285Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb45"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-28T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "24",
+    createTime: ISODate("2024-03-11T11:52:14.54Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.303Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb46"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-20T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "25",
+    createTime: ISODate("2024-03-11T11:52:14.566Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.328Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb47"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-29T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "26",
+    createTime: ISODate("2024-03-11T11:52:14.594Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.351Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb48"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-29T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "27",
+    createTime: ISODate("2024-03-11T11:52:14.621Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.372Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb49"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-29T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "29",
+    createTime: ISODate("2024-03-11T11:52:14.647Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.394Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb4a"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-29T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "30",
+    createTime: ISODate("2024-03-11T11:52:14.672Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.412Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb4b"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-31T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "31",
+    createTime: ISODate("2024-03-11T11:52:14.696Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.432Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb4c"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-31T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "32",
+    createTime: ISODate("2024-03-11T11:52:14.723Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.451Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb4d"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-31T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "33",
+    createTime: ISODate("2024-03-11T11:52:14.746Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.466Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb4e"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-01T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "34",
+    createTime: ISODate("2024-03-11T11:52:14.767Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.486Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb4f"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-01T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "35",
+    createTime: ISODate("2024-03-11T11:52:14.787Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.505Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb50"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-01T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "36",
+    createTime: ISODate("2024-03-11T11:52:14.807Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.521Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb51"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-02T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "37",
+    createTime: ISODate("2024-03-11T11:52:14.829Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.538Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb52"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-02T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "38",
+    createTime: ISODate("2024-03-11T11:52:14.848Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.57Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb53"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-02T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "39",
+    createTime: ISODate("2024-03-11T11:52:14.867Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.588Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb54"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-03T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "40",
+    createTime: ISODate("2024-03-11T11:52:14.889Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.603Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb55"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-03T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "41",
+    createTime: ISODate("2024-03-11T11:52:14.908Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.619Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb56"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-03T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "42",
+    createTime: ISODate("2024-03-11T11:52:14.929Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.634Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb57"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-04T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "43",
+    createTime: ISODate("2024-03-11T11:52:14.948Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.652Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb58"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-04T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "44",
+    createTime: ISODate("2024-03-11T11:52:14.966Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.668Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06eab11040c2c9bbb59"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-04T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "45",
+    createTime: ISODate("2024-03-11T11:52:14.989Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.687Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb5a"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-05T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "46",
+    createTime: ISODate("2024-03-11T11:52:15.008Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.701Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb5b"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-05T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "47",
+    createTime: ISODate("2024-03-11T11:52:15.028Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.72Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb5c"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-05T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "48",
+    createTime: ISODate("2024-03-11T11:52:15.048Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.736Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb5d"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-06T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "49",
+    createTime: ISODate("2024-03-11T11:52:15.069Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.754Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb5e"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-06T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "50",
+    createTime: ISODate("2024-03-11T11:52:15.091Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.772Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb5f"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-06T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "51",
+    createTime: ISODate("2024-03-11T11:52:15.113Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.79Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb60"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-07T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "52",
+    createTime: ISODate("2024-03-11T11:52:15.134Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.81Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb61"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-07T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "53",
+    createTime: ISODate("2024-03-11T11:52:15.154Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.829Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb62"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-07T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "54",
+    createTime: ISODate("2024-03-11T11:52:15.171Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.849Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb63"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-08T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "55",
+    createTime: ISODate("2024-03-11T11:52:15.188Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.865Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb64"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-08T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "56",
+    createTime: ISODate("2024-03-11T11:52:15.205Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.881Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb65"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-08T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "57",
+    createTime: ISODate("2024-03-11T11:52:15.223Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.897Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb66"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-09T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "58",
+    createTime: ISODate("2024-03-11T11:52:15.239Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.913Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb67"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-09T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "59",
+    createTime: ISODate("2024-03-11T11:52:15.258Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.931Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb68"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-09T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "60",
+    createTime: ISODate("2024-03-11T11:52:15.274Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.946Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb69"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-10T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "61",
+    createTime: ISODate("2024-03-11T11:52:15.292Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.962Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb6a"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-10T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "62",
+    createTime: ISODate("2024-03-11T11:52:15.31Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.979Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb6b"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-10T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "63",
+    createTime: ISODate("2024-03-11T11:52:15.327Z"),
+    updateTime: ISODate("2024-03-11T11:55:21.994Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb6c"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-11T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "64",
+    createTime: ISODate("2024-03-11T11:52:15.345Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.009Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb6d"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-11T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "65",
+    createTime: ISODate("2024-03-11T11:52:15.361Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.027Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb6e"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-11T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "66",
+    createTime: ISODate("2024-03-11T11:52:15.379Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.041Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb6f"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-12T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "67",
+    createTime: ISODate("2024-03-11T11:52:15.395Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.059Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb70"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-12T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "68",
+    createTime: ISODate("2024-03-11T11:52:15.412Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.075Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb71"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-12T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "69",
+    createTime: ISODate("2024-03-11T11:52:15.427Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.093Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb72"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-13T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "70",
+    createTime: ISODate("2024-03-11T11:52:15.443Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.109Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb73"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-13T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "71",
+    createTime: ISODate("2024-03-11T11:52:15.459Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.125Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb74"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-13T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "72",
+    createTime: ISODate("2024-03-11T11:52:15.475Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.143Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb75"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-14T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "73",
+    createTime: ISODate("2024-03-11T11:52:15.494Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.159Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb76"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-14T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "74",
+    createTime: ISODate("2024-03-11T11:52:15.512Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.177Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb77"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-14T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "75",
+    createTime: ISODate("2024-03-11T11:52:15.53Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.193Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb78"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-15T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "76",
+    createTime: ISODate("2024-03-11T11:52:15.549Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.209Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb79"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-15T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "77",
+    createTime: ISODate("2024-03-11T11:52:15.567Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.226Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb7a"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-15T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "78",
+    createTime: ISODate("2024-03-11T11:52:15.588Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.242Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb7b"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-16T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "79",
+    createTime: ISODate("2024-03-11T11:52:15.606Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.259Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb7c"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-16T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "80",
+    createTime: ISODate("2024-03-11T11:52:15.628Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.273Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb7d"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-16T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "81",
+    createTime: ISODate("2024-03-11T11:52:15.646Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.292Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb7e"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-17T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "82",
+    createTime: ISODate("2024-03-11T11:52:15.664Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.307Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb7f"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-17T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "83",
+    createTime: ISODate("2024-03-11T11:52:15.682Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.322Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb80"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-17T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "84",
+    createTime: ISODate("2024-03-11T11:52:15.7Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.338Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb81"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-18T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "85",
+    createTime: ISODate("2024-03-11T11:52:15.717Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.355Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb82"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-18T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "86",
+    createTime: ISODate("2024-03-11T11:52:15.733Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.372Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb83"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-18T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "87",
+    createTime: ISODate("2024-03-11T11:52:15.751Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.394Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb84"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-19T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "88",
+    createTime: ISODate("2024-03-11T11:52:15.77Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.425Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb85"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-19T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "89",
+    createTime: ISODate("2024-03-11T11:52:15.788Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.471Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb86"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-19T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "90",
+    createTime: ISODate("2024-03-11T11:52:15.81Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.507Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb87"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-20T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "91",
+    createTime: ISODate("2024-03-11T11:52:15.831Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.536Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb88"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-20T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "92",
+    createTime: ISODate("2024-03-11T11:52:15.853Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.571Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb89"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-20T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "93",
+    createTime: ISODate("2024-03-11T11:52:15.871Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.609Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb8a"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-21T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "94",
+    createTime: ISODate("2024-03-11T11:52:15.892Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.681Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb8b"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-21T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "95",
+    createTime: ISODate("2024-03-11T11:52:15.912Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.776Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb8c"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-21T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "96",
+    createTime: ISODate("2024-03-11T11:52:15.932Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.801Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb8d"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-22T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "97",
+    createTime: ISODate("2024-03-11T11:52:15.951Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.826Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb8e"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-22T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "98",
+    createTime: ISODate("2024-03-11T11:52:15.972Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.844Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef06fab11040c2c9bbb8f"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-22T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "99",
+    createTime: ISODate("2024-03-11T11:52:15.992Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.865Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb90"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-23T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "100",
+    createTime: ISODate("2024-03-11T11:52:16.011Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.885Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb91"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-23T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "101",
+    createTime: ISODate("2024-03-11T11:52:16.03Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.906Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb92"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-23T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "102",
+    createTime: ISODate("2024-03-11T11:52:16.051Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.954Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb93"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-24T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "103",
+    createTime: ISODate("2024-03-11T11:52:16.072Z"),
+    updateTime: ISODate("2024-03-11T11:55:22.996Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb94"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-24T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "104",
+    createTime: ISODate("2024-03-11T11:52:16.094Z"),
+    updateTime: ISODate("2024-03-11T11:55:23.027Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb95"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-24T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "105",
+    createTime: ISODate("2024-03-11T11:52:16.116Z"),
+    updateTime: ISODate("2024-03-11T11:55:23.069Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb96"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-25T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "106",
+    createTime: ISODate("2024-03-11T11:52:16.133Z"),
+    updateTime: ISODate("2024-03-11T11:55:23.101Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb97"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-25T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "107",
+    createTime: ISODate("2024-03-11T11:52:16.154Z"),
+    updateTime: ISODate("2024-03-11T11:55:23.126Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb98"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-25T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "108",
+    createTime: ISODate("2024-03-11T11:52:16.173Z"),
+    updateTime: ISODate("2024-03-11T11:55:23.159Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb99"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-26T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "109",
+    createTime: ISODate("2024-03-11T11:52:16.192Z"),
+    updateTime: ISODate("2024-03-11T11:55:23.187Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb9a"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-26T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "110",
+    createTime: ISODate("2024-03-11T11:52:16.211Z"),
+    updateTime: ISODate("2024-03-11T11:55:23.211Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb9b"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-26T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "111",
+    createTime: ISODate("2024-03-11T11:52:16.227Z"),
+    updateTime: ISODate("2024-03-11T11:55:23.233Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb9c"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-27T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "112",
+    createTime: ISODate("2024-03-11T11:52:16.244Z"),
+    updateTime: ISODate("2024-03-11T11:55:23.265Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb9d"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-27T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "113",
+    createTime: ISODate("2024-03-11T11:52:16.26Z"),
+    updateTime: ISODate("2024-03-11T11:55:23.293Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("65eef070ab11040c2c9bbb9e"),
+    hoscode: "1004",
+    depcode: "200040878",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-27T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    hosScheduleId: "114",
+    createTime: ISODate("2024-03-11T11:52:16.279Z"),
+    updateTime: ISODate("2024-03-11T11:55:23.321Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.fugui.AppointmentRegistration.model.hosp.Schedule"
+} ]);
