@@ -5,9 +5,12 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
+//更新排班实体
 @Data
 @ApiModel(description = "OrderMqVo")
-public class OrderMqVo {
+public class OrderMqVo implements Serializable {
 
 	@ApiModelProperty(value = "可预约数")
 	private Integer reservedNumber;

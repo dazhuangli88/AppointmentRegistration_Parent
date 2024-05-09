@@ -40,10 +40,10 @@ CREATE TABLE `hospital_set`  (
 -- ----------------------------
 -- Records of hospital_set
 -- ----------------------------
-INSERT INTO `hospital_set` VALUES (1, '中山大学附属第五医院', '1001', 'http://localhost:8001', '', NULL, '0756-2528888', 0, '2024-01-12 19:35:59', '2024-03-07 23:16:11', 0);
-INSERT INTO `hospital_set` VALUES (2, '遵义医学院第五附属珠海医院', '1002', 'http://localhost:8001', NULL, NULL, '0756-6275013', 0, '2024-01-14 15:08:25', '2024-03-09 03:08:09', 0);
-INSERT INTO `hospital_set` VALUES (3, '广东省中医院珠海医院', '1003', 'http://localhost:8001', NULL, NULL, '0756-3325027', 0, '2024-01-16 22:37:00', '2024-03-09 03:08:35', 0);
-INSERT INTO `hospital_set` VALUES (16, '珠海市人民医院', '1004', 'http://localhost:8001', 'bb1b9c318a9fc2f76e50eeeb8d881771', '周末', '13268218493', 1, '2024-03-09 03:11:25', '2024-03-10 19:08:37', 0);
-INSERT INTO `hospital_set` VALUES (17, '高新区人民医院', '1007', 'http://localhost:8001', 'b2eff8c1f0a378e9df36e62d965f9afd', '周礼', '13798997045', 1, '2024-03-09 03:13:02', '2024-03-09 03:13:02', 0);
+INSERT INTO `hospital_set` VALUES (1, '中山大学附属第五医院', '1001', 'http://localhost:8003', '', NULL, '0756-2528888', 0, '2024-01-12 19:35:59', '2024-03-07 23:16:11', 0);
+INSERT INTO `hospital_set` VALUES (2, '遵义医学院第五附属珠海医院', '1002', 'http://localhost:8003', NULL, NULL, '0756-6275013', 0, '2024-01-14 15:08:25', '2024-03-09 03:08:09', 0);
+INSERT INTO `hospital_set` VALUES (3, '广东省中医院珠海医院', '1003', 'http://localhost:8003', NULL, NULL, '0756-3325027', 0, '2024-01-16 22:37:00', '2024-03-09 03:08:35', 0);
+INSERT INTO `hospital_set` VALUES (16, '珠海市人民医院', '1004', 'http://localhost:8003', 'bb1b9c318a9fc2f76e50eeeb8d881771', '周末', '13268218493', 1, '2024-03-09 03:11:25', '2024-03-10 19:08:37', 0);
+INSERT INTO `hospital_set` VALUES (17, '高新区人民医院', '1007', 'http://localhost:8003', 'b2eff8c1f0a378e9df36e62d965f9afd', '周礼', '13798997045', 1, '2024-03-09 03:13:02', '2024-03-09 03:13:02', 0);
 
 SET FOREIGN_KEY_CHECKS = 1;

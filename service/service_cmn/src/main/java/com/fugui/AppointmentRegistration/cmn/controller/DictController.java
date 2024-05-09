@@ -21,15 +21,15 @@ import java.util.List;
  * @Date 2024/1/20 19:45
  * @Version 1.0
  */
-@Api(value = "数据字典接口")
+@Api(tags = "数据字典接口")
 @RestController
 @RequestMapping("/admin/cmn/dict")
-@CrossOrigin
 public class DictController {
     @Autowired
+
     private DictService dictService;
     //导入数据字典
-
+    @ApiOperation(value = "导入数据字典")
     public  Result importDict(MultipartFile file) {
         dictService.importDictData(file);
         return Result.ok();
@@ -42,10 +42,19 @@ public class DictController {
 //    }
 
     //导出数据字典
+    @ApiOperation(value = "导出数据字典")
     @GetMapping("exportData")
     public void exportDict(HttpServletResponse response){
         dictService.exportDictData(response);
 
+    }
+
+    //根据dictCode获取下级节点(dictCode(省)->id->市)
+    @ApiOperation(value = "根据dictCode获取下级节点")
+    @GetMapping("findByDictCode/{dictCode}")
+    public Result findByDict(@PathVariable String dictCode){
+        List<Dict> list = dictService.findByDictCode(dictCode);
+        return Result.ok(list);
     }
 
     //根据数据id查询子数据列表
@@ -55,6 +64,23 @@ public class DictController {
         List<Dict> list = dictService.findChildData(id);
         return Result.ok(list);
 
+    }
+
+    //根据dictcode和value查询
+    @ApiOperation(value ="根据dictcode和value查询")
+    @GetMapping("getName/{dictCode}/{value}")
+    public String getName(@PathVariable String dictCode,
+                          @PathVariable String value){
+        String dictName = dictService.getDictName(dictCode,value);
+        return dictName;
+    }
+
+    //根据value查询
+    @ApiOperation(value ="根据value查询")
+    @GetMapping("getName/{value}")
+    public String getName(@PathVariable String value){
+        String dictName = dictService.getDictName("",value);
+        return dictName;
     }
 
 }

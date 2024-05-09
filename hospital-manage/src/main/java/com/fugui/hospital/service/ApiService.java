@@ -11,6 +11,8 @@ public interface ApiService {
 
     String getSignKey();
 
+    String getSignKey(String hoscode);
+
     JSONObject getHospital();
 
     boolean saveHospital(String data);

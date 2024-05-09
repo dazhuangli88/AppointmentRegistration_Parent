@@ -10,7 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>service_hospital</module>
+        <module>service_cmn</module>
         <module>service_user</module>
+        <module>service_msm</module>
+        <module>service_oss</module>
+        <module>service_order</module>
+        <module>service_task</module>
+        <module>service_statistics</module>
     </modules>
 
     <artifactId>service</artifactId>
@@ -39,6 +45,13 @@
             <artifactId>service_util</artifactId>
             <version>1.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.fugui</groupId>
+            <artifactId>service_client_cmn</artifactId>
+            <version>1.0</version>
+        </dependency>
+
         <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

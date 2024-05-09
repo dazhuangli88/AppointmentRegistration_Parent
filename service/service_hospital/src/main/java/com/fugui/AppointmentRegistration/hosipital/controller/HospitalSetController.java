@@ -1,6 +1,7 @@
 package com.fugui.AppointmentRegistration.hosipital.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fugui.AppointmentRegistration.common.result.Result;
@@ -25,13 +26,15 @@ import java.util.Random;
  */
 
 @Api(tags = "医院设置管理")
-@CrossOrigin
+//@CrossOrigin
 @RestController
-@RequestMapping("/admin/hosp/hospitalSet")//http://localhost:8201/admin/hosp/hospitalSet/findAll
+@RequestMapping("/admin/hospital/hospitalSet")//http://localhost:8003/admin/hospital/hospitalSet/findAll
 public class HospitalSetController {
     //注入service
     @Autowired
     private HospitalSetService hospitalSetService;
+
+
 
     //1.查询医院设置表所有信息
     @ApiOperation(value = "获取所有医院设置")
@@ -53,7 +56,7 @@ public class HospitalSetController {
     }
     //3 条件查询分页
     @ApiOperation(value = "条件查询分页")
-    @PostMapping("finPageHospitalSet/{current}/{limit}")
+    @PostMapping("findPageHospitalSet/{current}/{limit}")
     public Result finPageHospitalSet(@PathVariable long current,
                                       @PathVariable long limit,
                                       @RequestBody(required = false) HospitalSetQueryVo hospitalSetQueryVo){
@@ -73,6 +76,7 @@ public class HospitalSetController {
 
         //调用方法实现分页查询
         Page<HospitalSet> pageHospitalSet = hospitalSetService.page(page,wrapper);
+
         return Result.ok(pageHospitalSet);
 
 

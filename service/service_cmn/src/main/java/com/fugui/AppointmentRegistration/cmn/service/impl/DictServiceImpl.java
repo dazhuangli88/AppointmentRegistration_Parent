@@ -9,6 +9,8 @@ import com.fugui.AppointmentRegistration.cmn.listener.DictListener;
 import com.fugui.AppointmentRegistration.model.cmn.Dict;
 import com.fugui.AppointmentRegistration.cmn.mapper.DictMapper;
 import com.fugui.AppointmentRegistration.vo.cmn.DictEeVo;
+import org.apache.commons.lang.StringUtils;
+import org.apache.poi.util.StringUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -58,8 +60,6 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
     @Override
 
     public void exportDictData(HttpServletResponse response) {
-
-
         try {
             //设置下载信息
             response.setContentType("application/vnd.ms-excel");
@@ -94,6 +94,45 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         }
     }
 
+    //根据dictcode和value查询
+    @Override
+    public String getDictName(String dictCode, String value) {
+        if(StringUtils.isEmpty(dictCode)){
+        //如果dictCode为空，直接根据value查询
+        QueryWrapper<Dict> wrapper = new QueryWrapper<>();
+        wrapper.eq("value",value);
+        Dict dict = baseMapper.selectOne(wrapper);
+        return dict.getName();
+    }else{//如果dictCode不为空，根据dictCode和value查询
+        //根据dictCode查询dict对象，得到dict的id值
+        Dict codeDict = this.getDictByDictCode(dictCode);
+        Long parent_id = codeDict.getId();
+        //根据parent_id和value进行查询
+        Dict finalDict = baseMapper.selectOne(new QueryWrapper<Dict>()
+                .eq("parent_id", parent_id)
+                .eq("value",value));
+        return finalDict.getName();
+        }
+
+
+    }
+    //根据dictCode获取下级节点(dictCode(省)->id->市辖区)
+    @Override
+    public List<Dict> findByDictCode(String dictCode) {
+        //根据dictcode获取对应（根据129行代码调用getDictByDictCode方法）
+        Dict dict = this.getDictByDictCode(dictCode);
+        //根据Id获取子节点(根据38行代码调用findChildData方法)
+        List<Dict> chliData = this.findChildData(dict.getId());
+        return chliData;
+    }
+
+    private Dict getDictByDictCode(String dictCode){
+        QueryWrapper<Dict> wrapper = new QueryWrapper<>();
+        wrapper.eq("dict_code",dictCode);
+        Dict codeDict = baseMapper.selectOne(wrapper);
+        return codeDict;
+
+    }
 
 
 }

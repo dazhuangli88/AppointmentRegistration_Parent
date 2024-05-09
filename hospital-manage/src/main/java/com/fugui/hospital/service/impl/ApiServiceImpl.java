@@ -2,15 +2,13 @@ package com.fugui.hospital.service.impl;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.fugui.hospital.mapper.HospitalSetMapper;
 import com.fugui.hospital.mapper.ScheduleMapper;
 import com.fugui.hospital.model.HospitalSet;
 import com.fugui.hospital.model.Schedule;
 import com.fugui.hospital.service.ApiService;
-import com.fugui.hospital.util.BeanUtils;
-import com.fugui.hospital.util.HttpRequestHelper;
-import com.fugui.hospital.util.MD5;
-import com.fugui.hospital.util.YyghException;
+import com.fugui.hospital.util.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +26,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Scanner;
 
 @Service
@@ -55,6 +54,17 @@ public class ApiServiceImpl implements ApiService {
     @Override
     public String getSignKey() {
         HospitalSet hospitalSet = hospitalSetMapper.selectById(1);
+        return hospitalSet.getSignKey();
+    }
+
+    @Override
+    public String getSignKey(String hoscode) {
+        QueryWrapper<HospitalSet> wrapper = new QueryWrapper<>();
+        wrapper.eq("hoscode",hoscode);
+        HospitalSet hospitalSet = hospitalSetMapper.selectOne(wrapper);
+        if(Objects.isNull(hospitalSet)){
+            return null;
+        }
         return hospitalSet.getSignKey();
     }
 
@@ -340,7 +350,7 @@ public class ApiServiceImpl implements ApiService {
            // paramMap.put("sign", MD5.encrypt(this.getSignKey()));
             paramMap.put("sign", HttpRequestHelper.getSign(paramMap, apiService.getSignKey()));
 
-            JSONObject respone = HttpRequestHelper.sendRequest(paramMap,"http://localhost/api/hosp/saveHospital");
+            JSONObject respone = HttpRequestHelper.sendRequest(paramMap,"http://localhost/api/hospital/saveHospital");
             System.out.println(respone.toJSONString());
             if(null == respone || 200 != respone.getIntValue("code")) {
                 throw new YyghException(respone.getString("message"), 201);

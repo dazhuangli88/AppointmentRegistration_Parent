@@ -35,7 +35,7 @@ CREATE TABLE `hospital_set`  (
 -- ----------------------------
 -- Records of hospital_set
 -- ----------------------------
-INSERT INTO `hospital_set` VALUES (1, '1004', 'bb1b9c318a9fc2f76e50eeeb8d881771', 'http://localhost:8001', '2024-03-09 03:15:41', '2024-03-10 19:08:18', 0);
+INSERT INTO `hospital_set` VALUES (1, '1004', 'bb1b9c318a9fc2f76e50eeeb8d881771', 'http://localhost:8003', '2024-03-09 03:15:41', '2024-03-10 19:08:18', 0);
 
 -- ----------------------------
 -- Table structure for order_info
