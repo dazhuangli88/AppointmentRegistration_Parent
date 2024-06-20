@@ -69,15 +69,25 @@ Git
 四、项目结构
 
 common：放了公用的工具类，包括子工具类rabbit_util、service_util
+
 hospital-mange：调用的医院接口
+
 model：实体类
+
 service-cmn：数据字表，用来操作数据
+
 service_hosp:医院、医院设置、医院科室、轮值班次服务
+
 service_msm:发送短信服务
+
 service_order:订单服务
+
 service_oss:患者文件上传功能
+
 service_statistics:统计数据
+
 service_task:服务提醒功能
+
 service_user:患者服务
 
 五、项目实现截图
