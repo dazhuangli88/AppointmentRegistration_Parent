@@ -109,8 +109,10 @@ service_user:患者服务
 （5）前端看病挂号详情功能
 
 患者浏览医院目录和医院资料，根据病因挑选看病的医院和对应科室再根据科室挑选看病的医生和预约时间，确认挂号信息后提交看病挂号订单，如图4-6医院资料图、图4-7看病挂号图所示。
+
 ![image](https://github.com/dazhuangli88/AppointmentRegistration_Parent/assets/138795186/7d2b3afc-2967-4b92-aee4-dfd9fa411955)
 ![image](https://github.com/dazhuangli88/AppointmentRegistration_Parent/assets/138795186/472bbf76-ce19-4a80-9d76-a992df4b8fd4)
+
 （6）前端微信支付功能
 
 患者选择看病挂号订单后，能够顺利访问微信支付界面，如图4-8微信支付图所示。
