@@ -14,8 +14,6 @@
 
 在医院前端患者系统方面，系统提供了首页医院的资料显示，医院导航栏检索、患者访问、患者实名身份验证、患者档案、看病挂号和看病提醒功能。患者可以通过手机号进行访问，进行实名身份资料验证后便可以管理病患资料并进行看病挂号的操作，支付医院订单并接收看病通知。
 
-系统的规划与建构运用了一系列技术。后端采用了Spring Boot和Spring Cloud架构，结合Nacos注册中心、Feign、Gateway等技术实现了微服务架构，使用Redis进行缓存管理，MongoDB存储医院相关数据，使用RabbitMQ处理订单相关操作，部署时使用Docker容器化，同时整合了阿里云OSS、阿里云短信服务和微信支付等服务。前端采用了Vue框架，结合Element-ui和nuxt.js实现了界面设计和交互功能。Echarts实现了数据可视化功能，提供了直观的数据展示。
-
 二、相关技术
 
 框架：SpringBoot+springcloud+MybatisPlus+Nacos+Feign+Gateway
